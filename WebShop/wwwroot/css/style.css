@@ -1,0 +1,71 @@
+﻿.toppage{
+    height:50px;
+    text-align:center;
+}
+.searchfield {
+    margin-left: 70%;
+   height:20px;
+   width:200px;
+}
+
+.search-form {
+    
+}
+.search-div{
+    margin-top:20px;
+}
+.loginlink{
+    position:absolute;
+    top:4px;
+    right:30px;
+    font-size:12px;
+    
+}
+a {
+    text-decoration: none;
+}
+body{
+    background:url("../images/background3.jpg") no-repeat;
+    background-size:100% 100%;
+    
+}
+.topname{
+    margin-top:25px;
+    font-size:24px;
+}
+.menu-table{
+    display:block;
+    width:100%;
+    height:20px;
+    margin-top:10px;
+}
+.menu-column{
+    width:19.6%;
+    text-align:center;
+    display:inline-block;
+}
+.menu-row {
+    width: 100%;
+    display: block;
+}
+tbody{
+    width:100%;
+    display:block;
+    
+}
+footer{
+    text-align:center;
+}
+.section-aboutus{
+    width:75%;
+    margin-left:12.5%;
+}
+div .why-we{
+    text-align:center;
+}
+div .advantages{
+    margin-right:2.5%;
+    margin-left:2.5%;
+    width:28%;
+    display:inline-block;
+}
