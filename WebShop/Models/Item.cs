@@ -7,12 +7,15 @@ namespace WebShop.Models
 {
     public class Item
     {
-        public int Id { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<Laptop> Laptops { get; set; }
-        public virtual ICollection<Tablet> Tablets { get; set; }
-        public virtual ICollection<SmartPhone> SmartPhones { get; set; }
-        public virtual ICollection<Accessories> Accessories { get; set; }
-        public virtual ICollection<PhotoTechique> PhotoTechiques { get; set; }
+
+        public double Price { get; set; }
+
+
+        public string Description { get; set; }
+
+        public string ImagePath { get; set; }
+
+
     }
 }
