@@ -6,7 +6,7 @@
     margin-left: 70%;
    height:20px;
    width:200px;
-   
+   vertical-align:top;
 }
 div .submit {
     height: 26px;
@@ -44,8 +44,7 @@ a {
     text-decoration: none;
 }
 body{
-    background:url("../images/background3.jpg") no-repeat;
-    background-size:100% 100%;
+    
     
 }
 .topname{
@@ -94,13 +93,13 @@ div .advantages{
 .filters {
     margin-left: 10%;
     width: 13%;
-    height: 100px;
-    display:inline-block;
+    vertical-align: top;
+    display: inline-block;
 }
 .products {
-    margin-left:2%;
+    margin-left: 2%;
     width: 60%;
-    height: 100px;
+    vertical-align:top;
     display: inline-block;
 }
 .price-row{
@@ -126,4 +125,19 @@ div .advantages{
 }
 .filters-submit{
     margin-top:15%;
+}
+.product-div{
+    display:inline-block;
+    width:20%;
+    margin-right:2.25%;
+    margin-left:2.25%;
+    margin-bottom:4%;
+}
+.price-p{
+    margin-top:5%;
+    margin-bottom:5%;
+}
+.name-p {
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
