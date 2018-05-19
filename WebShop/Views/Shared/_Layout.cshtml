@@ -13,7 +13,7 @@
    </nav>
     <table class="menu-table">
         <tr class="menu-row">
-            <td class="menu-column">Laptops</td>
+            <td class="menu-column"><a href='@Url.Action("Products","Home")'>Laptops</a></td>
             <td class="menu-column">Telephones</td>
             <td class="menu-column">Tablets</td>
             <td class="menu-column">Photo-technique</td>
@@ -22,8 +22,10 @@
     </table>
     <div class="search-div">
         <form class="search-form" method="post">
-            <input class="searchfield" type="text" name="name" value="" />
-            <input class="search-but" type="submit" name="submit" value="" />
+            <input class="searchfield" type="text" name="name" value="" placeholder="Search" />
+            <div class="submit">
+            <input class="search-but" type="submit" name="submit" value="" />  
+                </div>
         </form>
     </div>
     <div class="container body-content">
