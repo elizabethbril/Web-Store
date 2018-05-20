@@ -8,9 +8,9 @@ namespace Logic
 {
     public class Logic
     {
-        List<Item> items = new List<Item>();
-        List<User> users = new List<User>();
-        List<Order> orders = new List<Order>();
+        public List<Item> items = new List<Item>();
+        public List<User> users = new List<User>();
+        public List<Order> orders = new List<Order>();
 
         public void Registration(string login, string password, string shortName, string phone) 
         {

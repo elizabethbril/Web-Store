@@ -14,10 +14,6 @@ namespace Logic
         public Manager(User user) :
              base( user.getLogin(), user.getPassword(), user.getShortname(), user.getPhoneNumber())
         {
-            login = user.getLogin();
-            password = user.getPassword();
-            shortName = user.getShortname();
-            phoneNumber = user.getPhoneNumber();
         }
     }
 }
