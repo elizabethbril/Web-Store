@@ -12,10 +12,10 @@ namespace Logic
              base(login, password, shortName, phoneNumber)
         { }*/
         public Manager(User user) :
-             base( user.getLogin(), user.getpPassword(), user.getShortname(), user.getPhoneNumber())
+             base( user.getLogin(), user.getPassword(), user.getShortname(), user.getPhoneNumber())
         {
             login = user.getLogin();
-            password = user.getpPassword();
+            password = user.getPassword();
             shortName = user.getShortname();
             phoneNumber = user.getPhoneNumber();
         }

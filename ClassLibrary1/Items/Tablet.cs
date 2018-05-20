@@ -8,5 +8,8 @@ namespace Logic
 {
     public class Tablet:Item
     {
+        public Tablet(string description, int price, string name, int Id) :
+           base(description, price, name, Id)
+        { }
     }
 }
