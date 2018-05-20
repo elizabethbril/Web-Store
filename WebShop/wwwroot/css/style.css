@@ -141,3 +141,71 @@ div .advantages{
     margin-top: 5%;
     margin-bottom: 5%;
 }
+.login-div{
+    text-align:center;
+    margin-left:30%;
+    width:40%;
+    height:400px;
+}
+.login-input{
+    width:60%;
+    margin-left:20%;
+    display:block;
+    height:30px;
+    margin-top:18px;
+    margin-bottom:18px;
+    border-radius:8px;
+    border:1.5px solid grey;
+    text-align:center;
+}
+.login-but {
+    display: block;
+    width: 20%;
+    margin-top:18px;
+    margin-left: 40%;
+    height: 25px;
+    border-radius: 7px;
+    border: 1.5px solid grey;
+}
+.users-div{
+    margin-left:20%;
+    width:60%;
+    text-align:center;
+}
+.user-div{
+    width:33%;
+    display:inline-block;
+}
+.nickname-p{
+    font-size:20px;
+}
+.email-div{
+    width:48%;
+    display:inline-block;
+}
+.makemanager-but {
+    margin-top: 20px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1.5px solid grey;
+}
+.orders{
+    margin-left:25%;
+    width:50%;
+    text-align:center;
+}
+.order{
+   margin-top:20px;
+   margin-bottom:20px;
+}
+.order-username{
+    width:49%;
+    display:inline-block;
+}
+.order-but {
+    margin-top: 15px;
+    width: 15%;
+    height: 25px;
+    border-radius: 7px;
+    border: 1.5px solid grey;
+}
