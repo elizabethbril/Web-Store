@@ -1,0 +1,2 @@
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\Curswork\CourseWork\ClassLibrary1\obj\Debug\Logic.csprojResolveAssemblyReference.cache
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\Curswork\CourseWork\ClassLibrary1\obj\Debug\Logic.csproj.CoreCompileInputs.cache
