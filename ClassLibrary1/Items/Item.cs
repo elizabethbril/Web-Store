@@ -8,15 +8,28 @@ namespace Logic
 {
     public class Item 
     {
-        protected string type;
-        protected string description;
-        protected int price;
-        protected string name;
         protected int Id;
+        public string Description { get; set; }
+        public int Price { get; set; }
+        public  string Name { get; set; }
+        
 
-        public void setDescription(string value)
+        public Item(string description, int price, string name, int Id)
         {
-            description = value;
+            Description = description;
+            Price = price;
+            Name = name;
+            this.Id = Id;
         }
+
+        public Item(Item item)
+        {
+            Description = item.Description;
+            Price = item.Price;
+            Name = item.Name;
+            Id = item.getId();
+        }
+
+        public int getId() { return Id; }
     }
 }
