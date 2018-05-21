@@ -20,6 +20,26 @@ namespace WebShop.Controllers
             return View();
         }
 
+        public IActionResult Telephones()
+        {
+            return View();
+        }
+
+        public IActionResult Tablets()
+        {
+            return View();
+        }
+
+        public IActionResult PhotoTechnique()
+        {
+            return View();
+        }
+
+        public IActionResult Accessories()
+        {
+            return View();
+        }
+
         public IActionResult Login()
         {
             return View();
@@ -34,6 +54,8 @@ namespace WebShop.Controllers
         {
             return View();
         }
+
+
 
         public IActionResult Error()
         {

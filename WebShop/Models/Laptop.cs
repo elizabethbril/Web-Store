@@ -10,5 +10,7 @@ namespace WebShop.Models
         public Laptop(string description, int price, string name, int Id) :
            base(description, price, name, Id)
         { }
+
+      
     }
 }

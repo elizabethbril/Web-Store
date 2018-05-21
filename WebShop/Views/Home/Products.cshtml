@@ -1,6 +1,7 @@
 ﻿
 @{
     ViewData["Title"] = "Products";
+    
 }
 <section class="page">
     <div class="filters">
@@ -25,6 +26,7 @@
                 <input class="input-producer" type="checkbox" name="producer" value="Dell" />Dell<br />
                 <input class="input-producer" type="checkbox" name="producer" value="Hp" />Hp<br />
                 <input class="input-producer" type="checkbox" name="producer" value="Lenovo" />Lenovo<br />
+                //<select asp-items="checked"></select>
             </div>
             <div class="ram">
                 <p>RAM</p>
@@ -34,14 +36,14 @@
                 <input class="input-ram" type="checkbox" name="ram" value="16" />16<br />
             </div>
             <button class="filters-submit" name="submit" type="submit">Apply</button>
-        </form>
+         </form>
     </div>
     <div class="products">
         <div class="product-div">
             <div class="for-img"><img src="~/images/acer-aspire-1-a114-31-c5ub-nx-shxeu-008-black-141-150x150.jpg" alt="Alternate Text" /></div>
             <p class="name-p">Ноутбук Acer Aspire 1 A114-31-C5UB (NX.SHXEU.008) Black 14"</p>
             <p class="price-p">6 599 грн</p>
-            <a class="buy-a">Buy</a>
+            <button class="buy-a" name="bye" type="bye">Buy</button>
         </div>
 
 
@@ -49,7 +51,7 @@
             <div class="for-img"><img src="~/images/acer-aspire-1-a114-31-c5ub-nx-shxeu-008-black-141-150x150.jpg" alt="Alternate Text" /></div>
             <p class="name-p">Ноутбук Acer Aspire 1 A114-31-C5UB (NX.SHXEU.008) Black 14"</p>
             <p class="price-p">6 599 грн</p>
-            <a class="buy-a">Buy</a>
+            <button class="buy-a" name="bye" type="bye">Buy</button>
         </div>
 
 
@@ -57,27 +59,19 @@
             <div class="for-img"><img src="~/images/acer-aspire-1-a114-31-c5ub-nx-shxeu-008-black-141-150x150.jpg" alt="Alternate Text" /></div>
             <p class="name-p">Ноутбук Acer Aspire 1 A114-31-C5UB (NX.SHXEU.008) Black 14"</p>
             <p class="price-p">6 599 грн</p>
-            <a class="buy-a">Buy</a>
+            <button class="buy-a" name="bye" type="bye">Buy</button>
         </div>
         <div class="product-div">
             <div class="for-img"><img src="~/images/acer-aspire-1-a114-31-c5ub-nx-shxeu-008-black-141-150x150.jpg" alt="Alternate Text" /></div>
             <p class="name-p">Ноутбук Acer Aspire 1 A114-31-C5UB (NX.SHXEU.008) Black 14"</p>
             <p class="price-p">6 599 грн</p>
-            <a class="buy-a">Buy</a>
+            <button class="buy-a" name="bye" type="bye">Buy</button>
         </div>
         <div class="product-div">
             <div class="for-img"><img src="~/images/acer-aspire-1-a114-31-c5ub-nx-shxeu-008-black-141-150x150.jpg" alt="Alternate Text" /></div>
             <p class="name-p">Ноутбук Acer Aspire 1 A114-31-C5UB (NX.SHXEU.008) Black 14"</p>
             <p class="price-p">6 599 грн</p>
-            <a class="buy-a">Buy</a>
-        </div>
-
-
-        <div class="product-div">
-            <div class="for-img"><img src="~/images/acer-aspire-1-a114-31-c5ub-nx-shxeu-008-black-141-150x150.jpg" alt="Alternate Text" /></div>
-            <p class="name-p">Ноутбук Acer Aspire 1 A114-31-C5UB (NX.SHXEU.008) Black 14"</p>
-            <p class="price-p">6 599 грн</p>
-            <a class="buy-a">Buy</a>
+            <button class="buy-a" name="bye" type="bye">Buy</button>
         </div>
 
 
@@ -85,13 +79,21 @@
             <div class="for-img"><img src="~/images/acer-aspire-1-a114-31-c5ub-nx-shxeu-008-black-141-150x150.jpg" alt="Alternate Text" /></div>
             <p class="name-p">Ноутбук Acer Aspire 1 A114-31-C5UB (NX.SHXEU.008) Black 14"</p>
             <p class="price-p">6 599 грн</p>
-            <a class="buy-a">Buy</a>
+            <button class="buy-a" name="bye" type="bye">Buy</button>
+        </div>
+
+
+        <div class="product-div">
+            <div class="for-img"><img src="~/images/acer-aspire-1-a114-31-c5ub-nx-shxeu-008-black-141-150x150.jpg" alt="Alternate Text" /></div>
+            <p class="name-p">Ноутбук Acer Aspire 1 A114-31-C5UB (NX.SHXEU.008) Black 14"</p>
+            <p class="price-p">6 599 грн</p>
+            <button class="buy-a" name="bye" type="bye">Buy</button>
         </div>
         <div class="product-div">
             <div class="for-img"><img src="~/images/acer-aspire-1-a114-31-c5ub-nx-shxeu-008-black-141-150x150.jpg" alt="Alternate Text" /></div>
             <p class="name-p">Ноутбук Acer Aspire 1 A114-31-C5UB (NX.SHXEU.008) Black 14"</p>
             <p class="price-p">6 599 грн</p>
-            <a class="buy-a">Buy</a>
+            <button class="buy-a" name="bye" type="bye">Buy</button>
         </div>
     </div>
 </section>

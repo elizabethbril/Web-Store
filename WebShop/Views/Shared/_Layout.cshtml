@@ -14,10 +14,10 @@
     <table class="menu-table">
         <tr class="menu-row">
             <td class="menu-column"><a href='@Url.Action("Products","Home")'>Laptops</a></td>
-            <td class="menu-column"><a href=''>Telephones</a></td>
-            <td class="menu-column">Tablets</td>
-            <td class="menu-column">Photo-technique</td>
-            <td class="menu-column">Accessories</td>
+            <td class="menu-column"><a href='@Url.Action("Telephones","Home")'>Telephones</a></td>
+            <td class="menu-column"><a href='@Url.Action("Tablets", "Home")'>Tablets</a></td>
+            <td class="menu-column"><a href='@Url.Action("Photo-technique", "Home")'>Photo-technique</a></td>
+            <td class="menu-column"><a href='@Url.Action("Accessories", "Home")'>Accessories</a></td>
         </tr>
     </table>
     <div class="search-div">
@@ -30,6 +30,7 @@
     </div>
     <div class="container body-content">
         @RenderBody()
+        
         <hr />
         <footer>
             <p>&copy; 2018 - WebShop</p>
