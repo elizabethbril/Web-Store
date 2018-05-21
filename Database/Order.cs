@@ -17,9 +17,8 @@ namespace Database
         public int? UserId { get; set; }
 
         public Order() { }
-        public Order(int orderId, Item item, User user)
+        public Order(Item item, User user)
         {
-            Id = orderId;
             Item = item;
             User = user;
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Database
 {
-    public abstract class User
+    public class User
     {
         public int Id { get; set; }
         public string Login { get; set; }

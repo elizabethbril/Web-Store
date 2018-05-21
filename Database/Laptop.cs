@@ -8,8 +8,9 @@ namespace Database
 {
     public class Laptop:Item
     {
-        public Laptop(string description, int price, string name, int Id) :
-            base(description, price, name, Id)
+        public Laptop() { }
+        public Laptop(string description, int price, string name) :
+            base(description, price, name)
         { }
     }
 }

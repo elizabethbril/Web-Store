@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Database
 {
-    public class Admin
+    public class Admin:User
     {
+        public Admin() : base() { }
+        public Admin(User user) :
+             base(user.Login, user.Password, user.ShortName, user.PhoneNumber)
+        {
+
+        }
     }
 }
