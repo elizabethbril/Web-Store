@@ -1,2 +1,12 @@
 E:\UNIVERSITY\SoftwareArchitacktureAndDesign\Curswork\CourseWork\ClassLibrary1\obj\Debug\Logic.csprojResolveAssemblyReference.cache
 E:\UNIVERSITY\SoftwareArchitacktureAndDesign\Curswork\CourseWork\ClassLibrary1\obj\Debug\Logic.csproj.CoreCompileInputs.cache
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\bin\Debug\Database.dll
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\bin\Debug\Database.pdb
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\bin\Debug\Database.dll.config
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\obj\Debug\Logic.csprojResolveAssemblyReference.cache
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\obj\Debug\Logic.csproj.CoreCompileInputs.cache
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\obj\Debug\Logic.csproj.CopyComplete
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
