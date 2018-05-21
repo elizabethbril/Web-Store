@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Database
 {
-     public class Manager
+     public class Manager:User
     {
+        public Manager(User user) :
+             base(user.Login, user.Password, user.ShortName, user.PhoneNumber)
+        {
+           
+        }
     }
 }

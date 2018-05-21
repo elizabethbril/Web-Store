@@ -8,5 +8,8 @@ namespace Database
 {
     public class SmartPhone: Item
     {
+        public SmartPhone(string description, int price, string name, int Id) :
+            base(description, price, name, Id)
+        { }
     }
 }
