@@ -6,7 +6,11 @@
 *.user
 *.userosscache
 *.sln.docstates
+<<<<<<< HEAD
 *.cashe
+=======
+*.cache
+>>>>>>> Dimolll
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -260,3 +264,4 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+ClassLibrary1/obj/Debug/Logic.csproj.CoreCompileInputs.cache
