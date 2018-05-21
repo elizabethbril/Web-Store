@@ -8,6 +8,7 @@ namespace Database
 {
     public class PhotoTechique:Item
     {
+        public PhotoTechique() { }
         public PhotoTechique(string description, int price, string name) :
            base(description, price, name)
         { }

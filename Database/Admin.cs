@@ -8,7 +8,7 @@ namespace Database
 {
     public class Admin:User
     {
-        public Admin() : base() { }
+        public Admin() { }
         public Admin(User user) :
              base(user.Login, user.Password, user.ShortName, user.PhoneNumber)
         {

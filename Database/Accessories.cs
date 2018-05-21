@@ -8,6 +8,7 @@ namespace Database
 {
     public class Accessories: Item
     {
+        public Accessories() { }
         public Accessories(string description, int price, string name) :
            base(description, price, name)
         { }

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    public class Admin
+    public class Admin:User
     {
+        public Admin(User user) :
+             base(user.getLogin(), user.getPassword(), user.getShortname(), user.getPhoneNumber())
+        {
+
+        }
     }
 }

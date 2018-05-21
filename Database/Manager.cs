@@ -8,7 +8,7 @@ namespace Database
 {
      public class Manager:User
     {
-        public Manager():base() { }
+        public Manager(){ }
         public Manager(User user) :
              base(user.Login, user.Password, user.ShortName, user.PhoneNumber)
         {

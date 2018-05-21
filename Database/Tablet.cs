@@ -8,6 +8,7 @@ namespace Database
 {
     public class Tablet:Item
     {
+        public Tablet() { }
         public Tablet(string description, int price, string name) :
            base(description, price, name)
         { }
