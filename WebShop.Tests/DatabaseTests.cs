@@ -27,5 +27,10 @@ namespace WebShop.Tests
                   
             }
         }
+        [TestMethod]
+        public void UnitOfWorkTest()
+        {
+            
+        }
     }
 }

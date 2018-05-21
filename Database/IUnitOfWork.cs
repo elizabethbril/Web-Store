@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Database
 {
-    class IUnitOfWork
+    public interface IUnitOfWork
     {
+        ContextRepository<User> Users { get; }
+        ContextRepository<Manager> Managers { get; }
+        ContextRepository<Admin> Admins { get; }
+
+        ContextRepository<Laptop> Laptops { get; }
+        ContextRepository<Accessories> Accessories { get; }
+        ContextRepository<PhotoTechique> PhotoTechiques{ get; }
+        ContextRepository<SmartPhone> SmartPhones { get; }
+        ContextRepository<Tablet> Tablets { get; }
+
+        ContextRepository<Order> Orders { get; }
+
+        void Save();
+        void Dispose();
     }
 }
