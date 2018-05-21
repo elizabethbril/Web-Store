@@ -15,17 +15,23 @@ namespace WebShop.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Products()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Login()
         {
-            ViewData["Message"] = "Your contact page.";
+            return View();
+        }
 
+        public IActionResult Administrator()
+        {
+            return View();
+        }
+
+        public IActionResult Manager()
+        {
             return View();
         }
 
