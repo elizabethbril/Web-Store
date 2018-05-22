@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Database;
 using AutoMapper;
 
-namespace ClassLibrary1
+namespace Logic
 {
     public class OrderOperations
     {
@@ -16,22 +16,22 @@ namespace ClassLibrary1
             this._uow = uow;
         }
 
-        public List<Logic.Order> GetOrder()
+        public List<Order> GetOrder()
         {
 
-            return Mapper.Map<IEnumerable<Order>, List<Logic.Order>>(_uow.Orders.Get());
+            return Mapper.Map<IEnumerable<Database.Order>, List<Order>>(_uow.Orders.Get());
 
         }
-        public Logic.Order GetOrderById(int id)
+        public Order GetOrderById(int id)
         {
 
-            return Mapper.Map<Order, Logic.Order>(_uow.Orders.GetOne(x => (x.Id == id)));
+            return Mapper.Map<Database.Order, Order>(_uow.Orders.GetOne(x => (x.Id == id)));
 
         }
-        public void AddOrder(Logic.Order Order)
+        public void AddOrder(Order Order)
         {
 
-            _uow.Orders.Create(new Order { Item = Mapper.Map<Logic.Item,Item>(Order.item), User = Mapper.Map<Logic.User,User>(Order.user) });
+            _uow.Orders.Create(new Database.Order { Item = Mapper.Map<Item, Database.Item>(Order.item), User = Mapper.Map<User, Database.User>(Order.user) });
             _uow.Save();
         }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Ninject.Modules;
 using Database;
 
-namespace ClassLibrary1
+namespace Logic
 {
     public class Initializer : NinjectModule 
     {

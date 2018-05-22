@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Database;
 
-namespace ClassLibrary1
+namespace Logic
 {
     public class TabletOperations
     {
@@ -16,22 +16,22 @@ namespace ClassLibrary1
             this._uow = uow;
         }
 
-        public List<Logic.Tablet> GetTablet()
+        public List<Tablet> GetTablet()
         {
 
-            return Mapper.Map<IEnumerable<Tablet>, List<Logic.Tablet>>(_uow.Tablets.Get());
+            return Mapper.Map<IEnumerable<Database.Tablet>, List<Tablet>>(_uow.Tablets.Get());
 
         }
-        public Logic.Tablet GetTabletById(int id)
+        public Tablet GetTabletById(int id)
         {
 
-            return Mapper.Map<Tablet, Logic.Tablet>(_uow.Tablets.GetOne(x => (x.Id == id)));
+            return Mapper.Map<Database.Tablet, Tablet>(_uow.Tablets.GetOne(x => (x.Id == id)));
 
         }
-        public void AddTablet(Logic.Tablet Tablet)
+        public void AddTablet(Tablet Tablet)
         {
 
-            _uow.Tablets.Create(new Tablet { Name = Tablet.Name, Description = Tablet.Description, Price = Tablet.Price });
+            _uow.Tablets.Create(new Database.Tablet { Name = Tablet.Name, Description = Tablet.Description, Price = Tablet.Price });
             _uow.Save();
         }
 

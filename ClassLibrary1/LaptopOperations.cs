@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Database;
 
-namespace ClassLibrary1
+namespace Logic
 {
     public class LaptopOperations
     {
@@ -17,22 +17,22 @@ namespace ClassLibrary1
             this._uow = uow;
         }
 
-        public List<Logic.Laptop> GetLaptop()
+        public List<Laptop> GetLaptop()
         {
 
-            return Mapper.Map<IEnumerable<Laptop>, List<Logic.Laptop>>(_uow.Laptops.Get());
+            return Mapper.Map<IEnumerable<Database.Laptop>, List<Laptop>>(_uow.Laptops.Get());
 
         }
-        public Logic.Laptop GetLaptopById(int id)
+        public Laptop GetLaptopById(int id)
         {
 
-            return Mapper.Map<Laptop, Logic.Laptop>(_uow.Laptops.GetOne(x => (x.Id == id)));
+            return Mapper.Map<Database.Laptop, Laptop>(_uow.Laptops.GetOne(x => (x.Id == id)));
 
         }
-        public void AddLaptop(Logic.Laptop Laptop)
+        public void AddLaptop(Laptop Laptop)
         {
 
-            _uow.Laptops.Create(new Laptop { Name = Laptop.Name, Description = Laptop.Description, Price = Laptop.Price });
+            _uow.Laptops.Create(new Database.Laptop { Name = Laptop.Name, Description = Laptop.Description, Price = Laptop.Price });
             _uow.Save();
         }
 

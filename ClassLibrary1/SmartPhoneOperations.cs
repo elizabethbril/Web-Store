@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Database;
 using AutoMapper;
 
-namespace ClassLibrary1
+namespace Logic
 {
     public class SmartPhoneOperations
     {
@@ -16,22 +16,22 @@ namespace ClassLibrary1
             this._uow = uow;
         }
 
-        public List<Logic.SmartPhone> GetSmartPhone()
+        public List<SmartPhone> GetSmartPhone()
         {
 
-            return Mapper.Map<IEnumerable<SmartPhone>, List<Logic.SmartPhone>>(_uow.SmartPhones.Get());
+            return Mapper.Map<IEnumerable<Database.SmartPhone>, List<SmartPhone>>(_uow.SmartPhones.Get());
 
         }
-        public Logic.SmartPhone GetSmartPhoneById(int id)
+        public SmartPhone GetSmartPhoneById(int id)
         {
 
-            return Mapper.Map<SmartPhone, Logic.SmartPhone>(_uow.SmartPhones.GetOne(x => (x.Id == id)));
+            return Mapper.Map<Database.SmartPhone, SmartPhone>(_uow.SmartPhones.GetOne(x => (x.Id == id)));
 
         }
-        public void AddSmartPhone(Logic.SmartPhone SmartPhone)
+        public void AddSmartPhone(SmartPhone SmartPhone)
         {
 
-            _uow.SmartPhones.Create(new SmartPhone { Name = SmartPhone.Name, Description = SmartPhone.Description, Price = SmartPhone.Price });
+            _uow.SmartPhones.Create(new Database.SmartPhone { Name = SmartPhone.Name, Description = SmartPhone.Description, Price = SmartPhone.Price });
             _uow.Save();
         }
 

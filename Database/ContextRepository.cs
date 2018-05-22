@@ -15,6 +15,7 @@ namespace Database
         public ContextRepository(ShopContext _context)
         {
             context = _context;
+            dbSet = context.Set<TEntity>();
         }
         public IEnumerable<TEntity> Get()
         {

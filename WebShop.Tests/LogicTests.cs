@@ -10,6 +10,7 @@ namespace WebShop.Tests
         [TestMethod]
         public void Registration()
         {
+            
             //arrange
             Logic.Logic logic = new Logic.Logic();
             string login1 = "newuser";

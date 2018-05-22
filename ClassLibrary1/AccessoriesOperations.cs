@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Database;
 using AutoMapper;
 
-namespace ClassLibrary1
+namespace Logic
 {
     public class AccessoriesOperations
     {
@@ -16,22 +16,22 @@ namespace ClassLibrary1
             this._uow = uow;
         }
 
-        public List<Logic.Accessories> GetAccessories()
+        public List<Accessories> GetAccessories()
         {
 
-            return Mapper.Map<IEnumerable<Accessories>, List<Logic.Accessories>>(_uow.Accessories.Get());
+            return Mapper.Map<IEnumerable<Database.Accessories>, List<Accessories>>(_uow.Accessories.Get());
 
         }
-        public Logic.Accessories GetAccessoriesById(int id)
+        public Accessories GetAccessoriesById(int id)
         {
 
-            return Mapper.Map<Accessories, Logic.Accessories>(_uow.Accessories.GetOne(x => (x.Id == id)));
+            return Mapper.Map<Database.Accessories, Accessories>(_uow.Accessories.GetOne(x => (x.Id == id)));
 
         }
-        public void AddAccessories(Logic.Accessories Accessories)
+        public void AddAccessories(Accessories Accessories)
         {
 
-            _uow.Accessories.Create(new Accessories { Name = Accessories.Name, Description = Accessories.Description, Price = Accessories.Price });
+            _uow.Accessories.Create(new Database.Accessories { Name = Accessories.Name, Description = Accessories.Description, Price = Accessories.Price });
             _uow.Save();
         }
 

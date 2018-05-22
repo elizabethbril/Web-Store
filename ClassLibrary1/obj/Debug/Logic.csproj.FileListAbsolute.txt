@@ -22,3 +22,7 @@ C:\Users\Asus\Documents\GitHub\CourseWork\ClassLibrary1\obj\Debug\Logic.csproj.C
 C:\Users\Asus\Documents\GitHub\CourseWork\ClassLibrary1\obj\Debug\Logic.csproj.CopyComplete
 C:\Users\Asus\Documents\GitHub\CourseWork\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 C:\Users\Asus\Documents\GitHub\CourseWork\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Asus\Documents\GitHub\CourseWork\ClassLibrary1\bin\Debug\AutoMapper.dll
+C:\Users\Asus\Documents\GitHub\CourseWork\ClassLibrary1\bin\Debug\Ninject.dll
+C:\Users\Asus\Documents\GitHub\CourseWork\ClassLibrary1\bin\Debug\AutoMapper.xml
+C:\Users\Asus\Documents\GitHub\CourseWork\ClassLibrary1\bin\Debug\Ninject.xml

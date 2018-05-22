@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Database;
 using AutoMapper;
 
-namespace ClassLibrary1
+namespace Logic
 {
     public class AdminOperations
     {
@@ -16,22 +16,22 @@ namespace ClassLibrary1
             this._uow = uow;
         }
 
-        public List<Logic.Admin> GetAdmin()
+        public List<Admin> GetAdmin()
         {
 
-            return Mapper.Map<IEnumerable<Admin>, List<Logic.Admin>>(_uow.Admins.Get());
+            return Mapper.Map<IEnumerable<Database.Admin>, List<Admin>>(_uow.Admins.Get());
 
         }
-        public Logic.Admin GetAdminById(int id)
+        public Admin GetAdminById(int id)
         {
 
-            return Mapper.Map<Admin, Logic.Admin>(_uow.Admins.GetOne(x => (x.Id == id)));
+            return Mapper.Map<Database.Admin, Admin>(_uow.Admins.GetOne(x => (x.Id == id)));
 
         }
-        public void AddAdmin(Logic.Admin Admin)
+        public void AddAdmin(Admin Admin)
         {
 
-            _uow.Admins.Create(new Admin { Login = Admin.getLogin(), Password = Admin.getPassword(), ShortName = Admin.getShortname(), PhoneNumber = Admin.getPhoneNumber(), Authorized = Admin.getAuthorized() });
+            _uow.Admins.Create(new Database.Admin { Login = Admin.getLogin(), Password = Admin.getPassword(), ShortName = Admin.getShortname(), PhoneNumber = Admin.getPhoneNumber(), Authorized = Admin.getAuthorized() });
             _uow.Save();
         }
 
