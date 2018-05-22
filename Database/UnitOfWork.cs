@@ -11,8 +11,7 @@ namespace Database
         
         public UnitOfWork()
         {
-            using (ShopContext _context=new ShopContext())
-            {
+            
                 
                
                 Users = new ContextRepository<User>();
@@ -24,7 +23,7 @@ namespace Database
                 SmartPhones = new ContextRepository<SmartPhone>();
                 Tablets = new ContextRepository<Tablet>();
                 Orders = new ContextRepository<Order>();
-            }
+            
         }
         public ContextRepository<User> Users { get; }
         public ContextRepository<Manager> Managers { get; }

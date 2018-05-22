@@ -9,6 +9,9 @@ namespace Logic
 {
     public class ShopLogic
     {
+        static ShopLogic(){
+            AutoMapper.Initialize();
+            }
         private OperationsContainer operationsContainer;
         public List<Item> items = new List<Item>();
         public List<User> users = new List<User>();
@@ -17,7 +20,8 @@ namespace Logic
         
         public ShopLogic()
         {
-            operationsContainer = new OperationsContainer();
+           
+           operationsContainer = new OperationsContainer();
             items.AddRange(operationsContainer.LaptopOperations.GetLaptop());
             items.AddRange(operationsContainer.AccessoriesOperations.GetAccessories());
             items.AddRange(operationsContainer.PhotoTechiqueOperations.GetPhotoTechique());

@@ -32,17 +32,8 @@ namespace WebShop.Tests
         [TestMethod]
         public void UnitOfWorkTest()
         {
-            using (ShopContext context = new ShopContext())
-            {
-                AutoMapper.Initialize();
-               
-                LaptopOperations laptop = new LaptopOperations();
-                List<Logic.Laptop> laptops = laptop.GetLaptop();
-                foreach (Logic.Laptop l in laptops)
-                {
-                    Console.WriteLine(l.getId() + " " + l.Name + " " + l.Description);
-                }
-            }
+            ShopLogic logic = new ShopLogic();
+            Console.WriteLine(logic.items.Where(i => i.GetType() == typeof(Logic.Laptop)).Select(i => i).ToList().Count);
 
         }
         [TestMethod]

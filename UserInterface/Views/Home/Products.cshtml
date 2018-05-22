@@ -1,0 +1,55 @@
+﻿@model List<Logic.Item>
+@{
+    
+    ViewData["Title"] = "Products";
+}
+<p>@Model.Count()</p>
+<section class="page">
+    <div class="filters">
+        <form action="" method="post">
+            <div class="price">
+                <p>Price</p>
+                <div class="price-row">
+                    <span>from:</span>
+                    <input class="price-box" type="text" />
+
+                </div>
+                <div class="price-row">
+                    <span>to:</span>
+                    <input class="price-box" type="text" />
+
+                </div>
+            </div>
+            <div class="producer">
+                <p>Producer</p>
+                <input class="input-producer" type="checkbox" name="producer" value="Asus" />Asus<br />
+                <input class="input-producer" type="checkbox" name="producer" value="Acer" />Acer<br />
+                <input class="input-producer" type="checkbox" name="producer" value="Dell" />Dell<br />
+                <input class="input-producer" type="checkbox" name="producer" value="Hp" />Hp<br />
+                <input class="input-producer" type="checkbox" name="producer" value="Lenovo" />Lenovo<br />
+            </div>
+            <div class="ram">
+                <p>RAM</p>
+                <input class="input-ram" type="checkbox" name="ram" value="2" />2<br />
+                <input class="input-ram" type="checkbox" name="ram" value="4" />4<br />
+                <input class="input-ram" type="checkbox" name="ram" value="8" />8<br />
+                <input class="input-ram" type="checkbox" name="ram" value="16" />16<br />
+            </div>
+            <button class="filters-submit" name="submit" type="submit">Apply</button>
+        </form>
+    </div>
+    <div class="products">
+        @foreach (Logic.Laptop item in Model)
+        {
+        <div class="product-div">
+            <div class="for-img"><img src="~/images/acer-aspire-1-a114-31-c5ub-nx-shxeu-008-black-141-150x150.jpg" alt="Alternate Text" /></div>
+            <p class="name-p">@item.Name</p>
+            <p class="price-p">@item.Price</p>
+            <a class="buy-a" href="/Home/Buy/@item.getId()">Buy</a>
+            <p>1</p>
+        </div>
+        }
+
+        
+    </div>
+</section>

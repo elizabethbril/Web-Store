@@ -12,9 +12,9 @@ namespace WebShop.Controllers
     public class HomeController : Controller
     {
         private ShopLogic shopLogic;
-        public HomeController(ShopLogic _logic)
+        public HomeController()
         {
-            shopLogic = _logic;
+            shopLogic = new ShopLogic();
         }
         public IActionResult Index()
         {

@@ -11,7 +11,7 @@ namespace Logic
         public int orderId;
         public Item item;
         public User user;
-
+        public Order() { }
         public Order(int orderId, Item item, User user)
         {
             this.orderId = orderId;

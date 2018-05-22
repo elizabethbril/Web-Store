@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebShop</title>
+    <link rel="stylesheet" href="~/Content/Site.css">
+</head>
+<body>
+    <nav class="toppage">
+        <div class="loginlink"><a href='@Url.Action("Login","Home")'>Log in</a></div>
+        <div class="topname">Kiev Technics</div>
+    </nav>
+    <table class="menu-table">
+        <tr class="menu-row">
+            <td class="menu-column"><a href='/Home/Products?type=1'>Laptops</a></td>
+            <td class="menu-column"><a href='/Home/Products?type=2'>Telephones</a></td>
+            <td class="menu-column"><a href='/Home/Products?type=3'>Tablets</a></td>
+            <td class="menu-column"><a href='/Home/Products?type=4'>Photo-technique</a></td>
+            <td class="menu-column"><a href='/Home/Products?type=5'>Accessories</a></td>
+        </tr>
+    </table>
+    <div class="search-div">
+        <form class="search-form" method="post">
+            <input class="searchfield" type="text" name="name" value="" placeholder="Search" />
+            <div class="submit">
+                <input class="search-but" type="submit" name="submit" value="" />
+            </div>
+        </form>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2018 - WebShop</p>
+        </footer>
+    </div>
+
+</body>
+</html>

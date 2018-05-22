@@ -8,6 +8,7 @@ using System.Data.Entity;
 
 namespace Database
 {
+   
     public class ShopContext:DbContext
     {
         public ShopContext() : base("OnlineShop")
@@ -26,5 +27,6 @@ namespace Database
         public DbSet<Admin> Admins { get; set; }
 
         public DbSet<Order> Orders { get; set; }
+       
     }
 }

@@ -10,8 +10,10 @@ namespace Logic
 {
     public class AutoMapper
     {
+        
         public static void Initialize()
         {
+            
             Mapper.Initialize(cfg =>
             {
                 cfg.CreateMap<Database.Laptop, Laptop>();
@@ -25,5 +27,6 @@ namespace Logic
                 cfg.CreateMap<Database.Order, Order>();
             });
         }
+
     }
 }
