@@ -10,8 +10,8 @@ namespace Logic
 {
     public class UserOperations
     {
-        private readonly UnitOfWork _uow;
-        public UserOperations(UnitOfWork uow)
+        private readonly IUnitOfWork _uow;
+        public UserOperations(IUnitOfWork uow)
         {
             this._uow = uow;
         }

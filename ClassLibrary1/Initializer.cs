@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ninject.Modules;
+
 using Database;
 
 namespace Logic
@@ -13,6 +14,7 @@ namespace Logic
         public override void Load()
         {
             this.Bind<IUnitOfWork>().To<UnitOfWork>();
+            
         }
     }
 }

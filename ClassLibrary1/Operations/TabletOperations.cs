@@ -10,8 +10,8 @@ namespace Logic
 {
     public class TabletOperations
     {
-        private readonly UnitOfWork _uow;
-        public TabletOperations(UnitOfWork uow)
+        private readonly IUnitOfWork _uow;
+        public TabletOperations(IUnitOfWork uow)
         {
             this._uow = uow;
         }

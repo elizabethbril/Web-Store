@@ -5,11 +5,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebShop.Models;
+using Logic;
 
 namespace WebShop.Controllers
 {
     public class HomeController : Controller
     {
+        private ShopLogic shopLogic;
+        public HomeController(ShopLogic _logic)
+        {
+            shopLogic = _logic;
+        }
         public IActionResult Index()
         {
             return View();

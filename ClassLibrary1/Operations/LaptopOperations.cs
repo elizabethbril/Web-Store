@@ -11,8 +11,8 @@ namespace Logic
     public class LaptopOperations
     {
 
-        private readonly UnitOfWork _uow;
-        public LaptopOperations(UnitOfWork uow)
+        private readonly IUnitOfWork _uow;
+        public LaptopOperations(IUnitOfWork uow)
         {
             this._uow = uow;
         }

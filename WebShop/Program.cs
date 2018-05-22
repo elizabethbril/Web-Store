@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
+
 namespace WebShop
 {
     public class Program
@@ -15,6 +16,7 @@ namespace WebShop
         public static void Main(string[] args)
         {
             BuildWebHost(args).Run();
+            
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

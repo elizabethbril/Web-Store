@@ -12,7 +12,7 @@ namespace WebShop.Tests
         {
             
             //arrange
-            Logic.Logic logic = new Logic.Logic();
+            Logic.ShopLogic logic = new Logic.ShopLogic();
             string login1 = "newuser";
             string password1 = "newpassword";
             string shortname1 = "name_surname";
@@ -27,7 +27,7 @@ namespace WebShop.Tests
         [TestMethod]
         public void ChangeItem()
         {
-            Logic.Logic logic = new Logic.Logic();
+            Logic.ShopLogic logic = new Logic.ShopLogic();
             logic.items.Add(new Item("My new Laptop", 456, "ASUS 456", 12345));
             logic.ChangeItem(new Item("My old Laptop", 456, "ASUS 456", 12345));
             Assert.AreEqual(new Item("My old Laptop", 456, "ASUS 456", 12345).getId(), logic.items[0].getId());
@@ -43,7 +43,7 @@ namespace WebShop.Tests
             string phone1 = "380677291621";
             User newUser = new User(login1, password1, shortname1, phone1);
 
-            Logic.Logic logic = new Logic.Logic();
+            Logic.ShopLogic logic = new Logic.ShopLogic();
             logic.doOrder(item, newUser, 456789);
             Order order = new Order(456789, item, newUser);
 
@@ -59,7 +59,7 @@ namespace WebShop.Tests
             string phone1 = "380677291621";
             User newUser = new User(login1, password1, shortname1, phone1);
 
-            Logic.Logic logic = new Logic.Logic();
+            Logic.ShopLogic logic = new Logic.ShopLogic();
             logic.users.Add(newUser);
             logic.newManager(newUser);
 

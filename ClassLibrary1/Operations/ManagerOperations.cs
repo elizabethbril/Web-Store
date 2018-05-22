@@ -10,8 +10,8 @@ namespace Logic
 {
     public class ManagerOperations
     {
-        private readonly UnitOfWork _uow;
-        public ManagerOperations(UnitOfWork uow)
+        private readonly IUnitOfWork _uow;
+        public ManagerOperations(IUnitOfWork uow)
         {
             this._uow = uow;
         }

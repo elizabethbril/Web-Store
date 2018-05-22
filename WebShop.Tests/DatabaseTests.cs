@@ -49,5 +49,10 @@ namespace WebShop.Tests
             }
 
         }
+        [TestMethod]
+        public void OperationContainerTest()
+        {
+           
+        }
     }
 }

@@ -28,6 +28,23 @@ namespace Database
             Orders = orderRepository;
            
         }
+        /*public UnitOfWork()
+        {
+            using (ShopContext _context=new ShopContext())
+            {
+                
+                context = _context;
+                Users = new ContextRepository<User>(_context);
+                Managers = new ContextRepository<Manager>(_context);
+                Admins = new ContextRepository<Admin>(_context);
+                Laptops = new ContextRepository<Laptop>(_context);
+                Accessories = new ContextRepository<Accessories>(_context);
+                PhotoTechiques = new ContextRepository<PhotoTechique>(_context);
+                SmartPhones = new ContextRepository<SmartPhone>(_context);
+                Tablets = new ContextRepository<Tablet>(_context);
+                Orders = new ContextRepository<Order>(_context);
+            }
+        }*/
         public ContextRepository<User> Users { get; }
         public ContextRepository<Manager> Managers { get; }
         public ContextRepository<Admin> Admins { get; }

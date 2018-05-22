@@ -10,8 +10,8 @@ namespace Logic
 {
     public class PhotoTechniqueOperations
     {
-        private readonly UnitOfWork _uow;
-        public PhotoTechniqueOperations(UnitOfWork uow)
+        private readonly IUnitOfWork _uow;
+        public PhotoTechniqueOperations(IUnitOfWork uow)
         {
             this._uow = uow;
         }
