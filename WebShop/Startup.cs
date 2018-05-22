@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Logic;
-using Database;
+
 
 namespace WebShop
 {
@@ -25,18 +25,8 @@ namespace WebShop
         {
             services.AddMvc();
 
-            services.AddScoped<ShopContext>();
-            services.AddScoped<ContextRepository<Database.User>>();
-            services.AddScoped<ContextRepository<Database.Manager>>();
-            services.AddScoped<ContextRepository<Database.Admin>>();
-            services.AddScoped<ContextRepository<Database.Laptop>>();
-            services.AddScoped<ContextRepository<Database.Accessories>>();
-            services.AddScoped<ContextRepository<Database.PhotoTechique>>();
-            services.AddScoped<ContextRepository<Database.SmartPhone>>();
-            services.AddScoped<ContextRepository<Database.Tablet>>();
-            services.AddScoped<ContextRepository<Database.Order>>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<ShopLogic>();
+           
+            services.AddSingleton<ShopLogic>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

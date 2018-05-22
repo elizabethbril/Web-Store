@@ -12,9 +12,9 @@ namespace Logic
     {
 
         private readonly IUnitOfWork _uow;
-        public LaptopOperations(IUnitOfWork uow)
+        public LaptopOperations()
         {
-            this._uow = uow;
+            _uow = new UnitOfWork();
         }
 
         public List<Laptop> GetLaptop()
@@ -33,13 +33,12 @@ namespace Logic
         {
 
             _uow.Laptops.Create(new Database.Laptop { Name = Laptop.Name, Description = Laptop.Description, Price = Laptop.Price });
-            _uow.Save();
+
         }
 
         public void DeleteLaptop(int id)
         {
             _uow.Laptops.Remove(_uow.Laptops.FindById(id));
-            _uow.Save();
         }
     }
 }

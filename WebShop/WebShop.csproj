@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary1\Logic.csproj" />
-    <ProjectReference Include="..\Database\Database.csproj" />
   </ItemGroup>
 
 </Project>

@@ -35,12 +35,8 @@ namespace WebShop.Tests
             using (ShopContext context = new ShopContext())
             {
                 AutoMapper.Initialize();
-                UnitOfWork UoW = new UnitOfWork(context, new ContextRepository<Database.User>(context),
-                    new ContextRepository<Database.Manager>(context), new ContextRepository<Database.Admin>(context),
-                    new ContextRepository<Database.Laptop>(context), new ContextRepository<Database.Accessories>(context),
-                    new ContextRepository<Database.PhotoTechique>(context), new ContextRepository<Database.SmartPhone>(context),
-                    new ContextRepository<Database.Tablet>(context), new ContextRepository<Database.Order>(context));
-                LaptopOperations laptop = new LaptopOperations(UoW);
+               
+                LaptopOperations laptop = new LaptopOperations();
                 List<Logic.Laptop> laptops = laptop.GetLaptop();
                 foreach (Logic.Laptop l in laptops)
                 {

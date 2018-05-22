@@ -20,7 +20,6 @@ namespace Database
 
         ContextRepository<Order> Orders { get; }
 
-        void Save();
-        void Dispose();
+       
     }
 }

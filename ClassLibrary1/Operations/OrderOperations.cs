@@ -11,9 +11,9 @@ namespace Logic
     public class OrderOperations
     {
         private readonly IUnitOfWork _uow;
-        public OrderOperations(IUnitOfWork uow)
+        public OrderOperations()
         {
-            this._uow = uow;
+            _uow = new UnitOfWork();
         }
 
         public List<Order> GetOrder()
@@ -32,13 +32,13 @@ namespace Logic
         {
 
             _uow.Orders.Create(new Database.Order { Item = Mapper.Map<Item, Database.Item>(Order.item), User = Mapper.Map<User, Database.User>(Order.user) });
-            _uow.Save();
+       
         }
 
         public void DeleteOrder(int id)
         {
             _uow.Orders.Remove(_uow.Orders.FindById(id));
-            _uow.Save();
+        
         }
     }
 }

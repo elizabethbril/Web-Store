@@ -9,7 +9,7 @@ namespace Logic
 {
     public class OperationsContainer
     {
-        private readonly IUnitOfWork UoW;
+        
         public LaptopOperations LaptopOperations { get; }
         public AccessoriesOperations AccessoriesOperations { get; }
         public PhotoTechniqueOperations PhotoTechiqueOperations { get; }
@@ -19,18 +19,18 @@ namespace Logic
         public ManagerOperations ManagerOperations { get; }
         public AdminOperations AdminOperations { get; }
         public OrderOperations OrderOperations { get; }
-        public OperationsContainer(IUnitOfWork _uow)
+        public OperationsContainer()
         {
-            UoW = _uow;
-            LaptopOperations = new LaptopOperations(UoW);
-            AccessoriesOperations = new AccessoriesOperations(UoW);
-            PhotoTechiqueOperations = new PhotoTechniqueOperations(UoW);
-            SmartPhoneOperations = new SmartPhoneOperations(UoW);
-            TabletOperations = new TabletOperations(UoW);
-            UserOperations = new UserOperations(UoW);
-            ManagerOperations = new ManagerOperations(UoW);
-            AdminOperations = new AdminOperations(UoW);
-            OrderOperations = new OrderOperations(UoW);
+           
+            LaptopOperations = new LaptopOperations();
+            AccessoriesOperations = new AccessoriesOperations();
+            PhotoTechiqueOperations = new PhotoTechniqueOperations();
+            SmartPhoneOperations = new SmartPhoneOperations();
+            TabletOperations = new TabletOperations();
+            UserOperations = new UserOperations();
+            ManagerOperations = new ManagerOperations();
+            AdminOperations = new AdminOperations();
+            OrderOperations = new OrderOperations();
         }
     }
 }

@@ -11,9 +11,9 @@ namespace Logic
     public class TabletOperations
     {
         private readonly IUnitOfWork _uow;
-        public TabletOperations(IUnitOfWork uow)
+        public TabletOperations()
         {
-            this._uow = uow;
+            _uow = new UnitOfWork();
         }
 
         public List<Tablet> GetTablet()
@@ -32,13 +32,13 @@ namespace Logic
         {
 
             _uow.Tablets.Create(new Database.Tablet { Name = Tablet.Name, Description = Tablet.Description, Price = Tablet.Price });
-            _uow.Save();
+            
         }
 
         public void DeleteTablet(int id)
         {
             _uow.Tablets.Remove(_uow.Tablets.FindById(id));
-            _uow.Save();
+            
         }
     }
 }

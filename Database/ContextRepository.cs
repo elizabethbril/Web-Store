@@ -10,42 +10,59 @@ namespace Database
 {
     public class ContextRepository<TEntity>:IGenericRepository<TEntity> where TEntity:class
     {
-        private readonly ShopContext context;
-        private readonly DbSet<TEntity> dbSet;
-        public ContextRepository(ShopContext _context)
-        {
-            context = _context;
-            dbSet = context.Set<TEntity>();
-        }
         public IEnumerable<TEntity> Get()
         {
-            return dbSet.AsNoTracking().ToList();
+            using (ShopContext context = new ShopContext())
+            {
+                return context.Set<TEntity>().AsNoTracking().ToList();
+            }
         }
 
         public IEnumerable<TEntity> Get(Func<TEntity, bool> predicate)
         {
-            return dbSet.AsNoTracking().Where(predicate).ToList();
+            using (ShopContext context = new ShopContext())
+            {
+                return context.Set<TEntity>().AsNoTracking().Where(predicate).ToList();
+            }
         }
         public TEntity GetOne(Func<TEntity, bool> predicate)
         {
-            return dbSet.AsNoTracking().Where(predicate).FirstOrDefault();
+            using (ShopContext context = new ShopContext())
+            {
+                return context.Set<TEntity>().AsNoTracking().Where(predicate).FirstOrDefault();
+            }
         }
         public TEntity FindById(int id)
         {
-            return dbSet.Find(id);
+            using (ShopContext context = new ShopContext())
+            {
+                return context.Set<TEntity>().Find(id);
+            }
         }
 
         public void Create(TEntity item)
         {
-            dbSet.Add(item);
+            using (ShopContext context = new ShopContext())
+            {
+                context.Set<TEntity>().Add(item);
+                context.SaveChanges();
+            }
         }
         public void Update(TEntity item)
         {
-            context.Entry(item).State = EntityState.Modified;
+            using (ShopContext context = new ShopContext())
+            {
+                context.Entry(item).State = EntityState.Modified;
+                context.SaveChanges();
+            }
         }
         public void Remove(TEntity item)
         {
-            dbSet.Remove(item);
+            using (ShopContext context = new ShopContext())
+            {
+                context.Set<TEntity>().Remove(item);
+                context.SaveChanges();
+            }
         }
         public IEnumerable<TEntity> GetWithInclude(params Expression<Func<TEntity, object>>[] includeProperties)
         {
@@ -61,9 +78,12 @@ namespace Database
 
         private IQueryable<TEntity> Include(params Expression<Func<TEntity, object>>[] includeProperties)
         {
-            IQueryable<TEntity> query = dbSet.AsNoTracking();
-            return includeProperties
-                .Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
+            using (ShopContext context = new ShopContext())
+            {
+                IQueryable<TEntity> query = context.Set<TEntity>().AsNoTracking();
+                return includeProperties
+                    .Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
+            }
         }
     }
 }

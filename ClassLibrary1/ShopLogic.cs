@@ -15,9 +15,9 @@ namespace Logic
         public List<Order> orders = new List<Order>();
         
         
-        public ShopLogic(IUnitOfWork _uow)
+        public ShopLogic()
         {
-            operationsContainer = new OperationsContainer(_uow);
+            operationsContainer = new OperationsContainer();
             items.AddRange(operationsContainer.LaptopOperations.GetLaptop());
             items.AddRange(operationsContainer.AccessoriesOperations.GetAccessories());
             items.AddRange(operationsContainer.PhotoTechiqueOperations.GetPhotoTechique());

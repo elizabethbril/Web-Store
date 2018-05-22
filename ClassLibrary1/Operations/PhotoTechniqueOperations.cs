@@ -11,9 +11,9 @@ namespace Logic
     public class PhotoTechniqueOperations
     {
         private readonly IUnitOfWork _uow;
-        public PhotoTechniqueOperations(IUnitOfWork uow)
+        public PhotoTechniqueOperations()
         {
-            this._uow = uow;
+            _uow = new UnitOfWork();
         }
 
         public List<PhotoTechique> GetPhotoTechique()
@@ -32,13 +32,13 @@ namespace Logic
         {
 
             _uow.PhotoTechiques.Create(new Database.PhotoTechique { Name = PhotoTechique.Name, Description = PhotoTechique.Description, Price = PhotoTechique.Price });
-            _uow.Save();
+          
         }
 
         public void DeletePhotoTechique(int id)
         {
             _uow.PhotoTechiques.Remove(_uow.PhotoTechiques.FindById(id));
-            _uow.Save();
+       
         }
     }
 }

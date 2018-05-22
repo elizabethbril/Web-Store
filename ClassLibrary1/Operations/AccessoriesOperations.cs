@@ -11,9 +11,9 @@ namespace Logic
     public class AccessoriesOperations
     {
         private readonly IUnitOfWork _uow;
-        public AccessoriesOperations(IUnitOfWork uow)
+        public AccessoriesOperations()
         {
-            this._uow = uow;
+            _uow = new UnitOfWork();
         }
 
         public List<Accessories> GetAccessories()
@@ -32,13 +32,13 @@ namespace Logic
         {
 
             _uow.Accessories.Create(new Database.Accessories { Name = Accessories.Name, Description = Accessories.Description, Price = Accessories.Price });
-            _uow.Save();
+            
         }
 
         public void DeleteAccessories(int id)
         {
             _uow.Accessories.Remove(_uow.Accessories.FindById(id));
-            _uow.Save();
+            
         }
     }
 }

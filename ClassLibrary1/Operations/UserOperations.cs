@@ -11,9 +11,9 @@ namespace Logic
     public class UserOperations
     {
         private readonly IUnitOfWork _uow;
-        public UserOperations(IUnitOfWork uow)
+        public UserOperations()
         {
-            this._uow = uow;
+            _uow = new UnitOfWork();
         }
 
         public List<User> GetUser()
@@ -32,13 +32,13 @@ namespace Logic
         {
 
             _uow.Users.Create(new Database.User { Login = User.getLogin(), Password = User.getPassword(), ShortName = User.getShortname(),PhoneNumber=User.getPhoneNumber(),Authorized=User.getAuthorized() });
-            _uow.Save();
+          
         }
 
         public void DeleteUser(int id)
         {
             _uow.Users.Remove(_uow.Users.FindById(id));
-            _uow.Save();
+           
         }
     }
 }

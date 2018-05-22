@@ -11,9 +11,9 @@ namespace Logic
     public class AdminOperations
     {
         private readonly IUnitOfWork _uow;
-        public AdminOperations(IUnitOfWork uow)
+        public AdminOperations()
         {
-            this._uow = uow;
+            _uow = new UnitOfWork();
         }
 
         public List<Admin> GetAdmin()
@@ -32,13 +32,13 @@ namespace Logic
         {
 
             _uow.Admins.Create(new Database.Admin { Login = Admin.getLogin(), Password = Admin.getPassword(), ShortName = Admin.getShortname(), PhoneNumber = Admin.getPhoneNumber(), Authorized = Admin.getAuthorized() });
-            _uow.Save();
+         
         }
 
         public void DeleteAdmin(int id)
         {
             _uow.Admins.Remove(_uow.Admins.FindById(id));
-            _uow.Save();
+           
         }
     }
 }

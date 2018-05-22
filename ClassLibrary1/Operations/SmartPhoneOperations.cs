@@ -11,9 +11,9 @@ namespace Logic
     public class SmartPhoneOperations
     {
         private readonly IUnitOfWork _uow;
-        public SmartPhoneOperations(IUnitOfWork uow)
+        public SmartPhoneOperations()
         {
-            this._uow = uow;
+            _uow = new UnitOfWork();
         }
 
         public List<SmartPhone> GetSmartPhone()
@@ -32,13 +32,13 @@ namespace Logic
         {
 
             _uow.SmartPhones.Create(new Database.SmartPhone { Name = SmartPhone.Name, Description = SmartPhone.Description, Price = SmartPhone.Price });
-            _uow.Save();
+           
         }
 
         public void DeleteSmartPhone(int id)
         {
             _uow.SmartPhones.Remove(_uow.SmartPhones.FindById(id));
-            _uow.Save();
+           
         }
     }
 }
