@@ -47,7 +47,7 @@ namespace Database
             context.Accessories.Add(new Accessories("no descr", 2199, "USB-hub Kingston Nucleum USB 3.1 Type-C (C-HUBC1-SR-EN)", "kingston_c_hubc1_sr_en_images_2949154215.jpg", 9));
             context.Accessories.Add(new Accessories("no descr", 3199, "Kingston HyperX Cloud II (KHX-HSCP-RD) Red", "kingston_hyperx_cloud_ii_red_images_434614402.jpg", 87));
             context.Accessories.Add(new Accessories("no descr", 156, "Kingston HyperX Savage USB 3.1 64GB (HXS3/64GB)", "kingston_hxs3_64gb_images_1826556130.png", 15));
-            context.Accessories.Add(new Accessories("no descr", 156, "GameMouse Logitech G903 Black", "32530415_images_2933174479.jpg", 0));
+            context.Accessories.Add(new Accessories("no descr", 1598, "GameMouse Logitech G903 Black", "32530415_images_2933174479.jpg", 0));
 
             context.Users.Add(user);
             context.SaveChanges();
