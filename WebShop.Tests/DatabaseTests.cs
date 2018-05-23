@@ -32,8 +32,7 @@ namespace WebShop.Tests
         [TestMethod]
         public void UnitOfWorkTest()
         {
-            ShopLogic logic = new ShopLogic();
-            Console.WriteLine(logic.items.Where(i => i.GetType() == typeof(Logic.Laptop)).Select(i => i).ToList().Count);
+            ShopLogic shopLogic = new ShopLogic();
 
         }
         [TestMethod]

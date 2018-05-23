@@ -15,7 +15,7 @@ namespace Database
         {
 
         }
-       
+       public DbSet<Item> Items { get; set; }
         public DbSet<Laptop> Laptops { get; set; }
         public DbSet<Accessories> Accessories { get; set; }
         public DbSet<PhotoTechique> PhotoTechiques { get; set; }
