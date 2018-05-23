@@ -166,7 +166,10 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\acer-aspire-1-a114-31-c5ub-nx-shxeu-008-black-141-150x150.jpg" />
+    <Content Include="images\copy_lenovo_tab3_za0y0036ua_5ab11c32760cb_images_3640238468.jpg" />
+    <Content Include="images\dell-inspiron-3552-i35c45diw-60-black-15-6-150x150.jpg" />
     <Content Include="images\iconmonstr-magnifier-4-32.png" />
+    <Content Include="images\samsung-galaxy-a7-sm-a720f-dual-sim-black-sm-a720fzkdsek4-150x150.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">

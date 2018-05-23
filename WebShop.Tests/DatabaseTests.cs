@@ -19,13 +19,8 @@ namespace WebShop.Tests
         {
             using (ShopContext context=new ShopContext())
             {
-                Database.Laptop laptop = new Database.Laptop("1", 2, "4");
-                Database.User user = new Database.User("nestea08@yandex.ru","22222222","nestea08","0964101687");
-                Database.Order order = new Database.Order(laptop, user);
-                context.Laptops.Add(laptop);
-                context.Users.Add(user);
-                context.Orders.Add(order);
-                context.SaveChanges();
+                
+               
                   
             }
         }
@@ -33,6 +28,7 @@ namespace WebShop.Tests
         public void UnitOfWorkTest()
         {
             ShopLogic shopLogic = new ShopLogic();
+            Console.WriteLine(shopLogic.items);
 
         }
         [TestMethod]

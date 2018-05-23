@@ -15,11 +15,13 @@ namespace Database
         public string imageLink { get; set; }
         public int Views { get; set; }
         public Item() { }
-        public Item(string description, int price, string name)
+        public Item(string description, int price, string name,string imageLink, int Views)
         {
             Description = description;
             Price = price;
             Name = name;
+            this.imageLink = imageLink;
+            this.Views = Views;
 
         }
 

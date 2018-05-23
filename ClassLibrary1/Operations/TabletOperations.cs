@@ -31,7 +31,7 @@ namespace Logic
         public void AddTablet(Tablet Tablet)
         {
 
-            _uow.Tablets.Create(new Database.Tablet { Name = Tablet.Name, Description = Tablet.Description, Price = Tablet.Price });
+            _uow.Tablets.Create(new Database.Tablet { Name = Tablet.Name, Description = Tablet.Description, Price = Tablet.Price, imageLink = Tablet.ImageLink, Views = Tablet.Views });
             
         }
 

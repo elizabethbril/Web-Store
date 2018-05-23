@@ -9,8 +9,8 @@ namespace Database
     public class SmartPhone: Item
     {
         public SmartPhone() { }
-        public SmartPhone(string description, int price, string name) :
-            base(description, price, name)
+        public SmartPhone(string description, int price, string name, string imageLink, int views) :
+            base(description, price, name, imageLink, views)
         { }
     }
 }

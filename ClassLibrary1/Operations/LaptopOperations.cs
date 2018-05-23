@@ -32,7 +32,7 @@ namespace Logic
         public void AddLaptop(Laptop Laptop)
         {
 
-            _uow.Laptops.Create(new Database.Laptop { Name = Laptop.Name, Description = Laptop.Description, Price = Laptop.Price });
+            _uow.Laptops.Create(new Database.Laptop { Name = Laptop.Name, Description = Laptop.Description, Price = Laptop.Price, imageLink = Laptop.ImageLink, Views = Laptop.Views });
 
         }
 

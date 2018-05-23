@@ -11,15 +11,18 @@ namespace Logic
         protected int Id;
         public string Description { get; set; }
         public int Price { get; set; }
-        public  string Name { get; set; }
-        
+        public string Name { get; set; }
+        public string ImageLink { get; set; }
+        public int Purchases { get; set; }
 
-        public Item(string description, int price, string name, int Id)
+        public Item(string description, int price, string name, int Id,string imageLink,int purchases)
         {
             Description = description;
             Price = price;
             Name = name;
             this.Id = Id;
+            ImageLink = imageLink;
+            Purchases = purchases;
         }
 
         public Item(Item item)
@@ -28,6 +31,8 @@ namespace Logic
             Price = item.Price;
             Name = item.Name;
             Id = item.getId();
+            ImageLink = item.ImageLink;
+            Purchases = item.Purchases;
         }
 
         public int getId() { return Id; }

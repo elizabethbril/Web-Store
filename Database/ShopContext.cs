@@ -4,18 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 
 namespace Database
 {
-   
-    public class ShopContext:DbContext
+
+    public class ShopContext : DbContext
     {
+        static ShopContext(){
+            DbInitializer dbInitializer = new DbInitializer();
+            dbInitializer.InitializeDatabase(new ShopContext());
+        }
         public ShopContext() : base("OnlineShop")
         {
-
+           
         }
-       public DbSet<Item> Items { get; set; }
+        
+        public DbSet<Item> Items { get; set; }
         public DbSet<Laptop> Laptops { get; set; }
         public DbSet<Accessories> Accessories { get; set; }
         public DbSet<PhotoTechique> PhotoTechiques { get; set; }

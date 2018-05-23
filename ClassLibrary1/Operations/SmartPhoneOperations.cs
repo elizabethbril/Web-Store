@@ -31,7 +31,7 @@ namespace Logic
         public void AddSmartPhone(SmartPhone SmartPhone)
         {
 
-            _uow.SmartPhones.Create(new Database.SmartPhone { Name = SmartPhone.Name, Description = SmartPhone.Description, Price = SmartPhone.Price });
+            _uow.SmartPhones.Create(new Database.SmartPhone { Name = SmartPhone.Name, Description = SmartPhone.Description, Price = SmartPhone.Price, imageLink = SmartPhone.ImageLink, Views = SmartPhone.Views });
            
         }
 
