@@ -27,3 +27,10 @@ C:\Users\Asus\Documents\GitHub\CourseWork\ClassLibrary1\bin\Debug\EntityFramewor
 C:\Users\Asus\Documents\GitHub\CourseWork\ClassLibrary1\obj\Debug\Logic.csproj.CopyComplete
 C:\Users\Asus\Documents\GitHub\CourseWork\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 C:\Users\Asus\Documents\GitHub\CourseWork\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\bin\Debug\AutoMapper.dll
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\bin\Debug\EntityFramework.dll
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.dll
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\bin\Debug\AutoMapper.xml
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\bin\Debug\EntityFramework.xml
+E:\UNIVERSITY\SoftwareArchitacktureAndDesign\WebShop\CourseWork\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.xml
