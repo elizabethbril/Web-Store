@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{ 
+    Logic.User user = (Logic.User)Session["user"];
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -8,8 +11,19 @@
 </head>
 <body>
     <nav class="toppage">
-        <div class="loginlink"><a href='@Url.Action("Login","Home")'>Log in</a></div>
-        <div class="topname">Kiev Technics</div>
+        
+        <div class="loginlink">
+            @if (user == null)
+            {
+        <a href="/Home/Login">Sign in</a>
+            }
+            else
+            {
+        <span>@user.getShortname()</span><a href="/Home/Exit">     Exit</a>
+            }
+        </div>
+
+        <div class="topname"><a href="/Home/Index">Kiev Technics</a></div>
     </nav>
     <table class="menu-table">
         <tr class="menu-row">

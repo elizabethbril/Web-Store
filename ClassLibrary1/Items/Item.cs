@@ -14,7 +14,7 @@ namespace Logic
         public string Name { get; set; }
         public string ImageLink { get; set; }
         public int Purchases { get; set; }
-
+        public Item() { }
         public Item(string description, int price, string name, int Id,string imageLink,int purchases)
         {
             Description = description;

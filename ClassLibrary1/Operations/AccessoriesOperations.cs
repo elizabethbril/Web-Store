@@ -31,7 +31,7 @@ namespace Logic
         public void AddAccessories(Accessories Accessories)
         {
 
-            _uow.Accessories.Create(new Database.Accessories { Name = Accessories.Name, Description = Accessories.Description, Price = Accessories.Price,imageLink=Accessories.ImageLink,Views=Accessories.Views });
+            _uow.Accessories.Create(new Database.Accessories { Name = Accessories.Name, Description = Accessories.Description, Price = Accessories.Price,imageLink=Accessories.ImageLink,Views=Accessories.Purchases });
             
         }
 

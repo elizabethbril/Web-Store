@@ -28,7 +28,7 @@ namespace WebShop.Tests
         public void UnitOfWorkTest()
         {
             ShopLogic shopLogic = new ShopLogic();
-            Console.WriteLine(shopLogic.items);
+            Console.WriteLine(shopLogic.users.Count);
 
         }
         [TestMethod]

@@ -34,7 +34,9 @@ namespace Logic
         }
         public void Registration(string login, string password, string shortName, string phone) 
         {
-            users.Add(new User(login,password,shortName, phone));
+            User user = new User(login, password, shortName, phone);
+            users.Add(user);
+            operationsContainer.UserOperations.AddUser(user);
         }
 
         public void ChangeItem(Item item)
@@ -49,7 +51,10 @@ namespace Logic
         public void doOrder(Item item, User user, int id) {
             orders.Add(new Order(id, item, user));
         }
-
+        public User FindUser(string email,string password)
+        {
+            return users.First(u => u.getLogin() == email && u.getPassword() == password);
+        }
         public void newManager(User user)
         {
             for(int i=0; i<users.Count;i++)

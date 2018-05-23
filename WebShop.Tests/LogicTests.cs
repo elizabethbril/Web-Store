@@ -28,15 +28,15 @@ namespace WebShop.Tests
         public void ChangeItem()
         {
             Logic.ShopLogic logic = new Logic.ShopLogic();
-            logic.items.Add(new Item("My new Laptop", 456, "ASUS 456", 12345));
-            logic.ChangeItem(new Item("My old Laptop", 456, "ASUS 456", 12345));
-            Assert.AreEqual(new Item("My old Laptop", 456, "ASUS 456", 12345).getId(), logic.items[0].getId());
+            logic.items.Add(new Item("My new Laptop", 456, "ASUS 456", 12345,"",0));
+            logic.ChangeItem(new Item("My old Laptop", 456, "ASUS 456", 12345, "", 0));
+            Assert.AreEqual(new Item("My old Laptop", 456, "ASUS 456", 12345, "", 0).getId(), logic.items[0].getId());
         }
 
         [TestMethod]
         public void doOrder()
         {
-            Item item = new Item("My new Laptop", 456, "ASUS 456", 12345);
+            Item item = new Item("My new Laptop", 456, "ASUS 456", 12345, "", 0);
             string login1 = "newuser";
             string password1 = "newpassword";
             string shortname1 = "name_surname";

@@ -15,6 +15,7 @@ namespace Database
         static ShopContext(){
             DbInitializer dbInitializer = new DbInitializer();
             dbInitializer.InitializeDatabase(new ShopContext());
+            
         }
         public ShopContext() : base("OnlineShop")
         {

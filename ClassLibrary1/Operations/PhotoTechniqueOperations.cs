@@ -31,7 +31,7 @@ namespace Logic
         public void AddPhotoTechique(PhotoTechique PhotoTechique)
         {
 
-            _uow.PhotoTechiques.Create(new Database.PhotoTechique { Name = PhotoTechique.Name, Description = PhotoTechique.Description, Price = PhotoTechique.Price, imageLink = PhotoTechique.ImageLink, Views = PhotoTechique.Views });
+            _uow.PhotoTechiques.Create(new Database.PhotoTechique { Name = PhotoTechique.Name, Description = PhotoTechique.Description, Price = PhotoTechique.Price, imageLink = PhotoTechique.ImageLink, Views = PhotoTechique.Purchases });
           
         }
 

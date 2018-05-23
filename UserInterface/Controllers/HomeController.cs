@@ -13,7 +13,7 @@ namespace UserInterface.Controllers
         List<Item> currentItems;
         public HomeController()
         {
-            
+
             shopLogic = new ShopLogic();
             currentItems = shopLogic.items;
 
@@ -45,19 +45,43 @@ namespace UserInterface.Controllers
                 default:
                     return HttpNotFound();
             }
-        
+
         }
         [HttpPost]
-        public ActionResult Products(int price1,int price2)
+        public ActionResult Products(int price1, int price2)
         {
-            
-            return View(currentItems.Select(i=>i).ToList());
+
+            return View(currentItems.Select(i => i).ToList());
         }
         public ActionResult Login()
         {
             return View();
         }
-
+        [HttpPost]
+        public ActionResult Login(string email,string password)
+        {
+            User user = shopLogic.FindUser(email, password);
+            if (user != null)
+            {
+               
+                Session["user"] = user;
+                return View("Index");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        [HttpPost]
+        public ActionResult Signup(string email,string password,string shortname,string phoneNumber)
+        {
+            shopLogic.Registration(email, password, shortname, phoneNumber);
+            return Login(email,password);
+        }
+        public ActionResult Signup()
+        {
+            return View();
+        }
         public ActionResult Administrator()
         {
             return View();
@@ -67,7 +91,11 @@ namespace UserInterface.Controllers
         {
             return View();
         }
-
+        public ActionResult Exit()
+        {
+            Session["user"] = null;
+            return View("Index");
+        }
         
     }
 }
