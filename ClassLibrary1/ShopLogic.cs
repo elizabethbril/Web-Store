@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Database;
+using System.Text.RegularExpressions;
 
 namespace Logic
 {
@@ -28,7 +29,7 @@ namespace Logic
             items.AddRange(operationsContainer.SmartPhoneOperations.GetSmartPhone());
             items.AddRange(operationsContainer.TabletOperations.GetTablet());
             users.AddRange(operationsContainer.UserOperations.GetUser());
-            users.AddRange(operationsContainer.ManagerOperations.GetManager());
+           users.AddRange(operationsContainer.ManagerOperations.GetManager());
             users.AddRange(operationsContainer.AdminOperations.GetAdmin());
             orders.AddRange(operationsContainer.OrderOperations.GetOrder());
         }
@@ -47,13 +48,25 @@ namespace Logic
                     items[i] = new Item(item);
             }
         }
+        public Item findItem(int id)
+        {
+            return items.First(i => i.getId() == id);
+        }
+        public void doOrder(Item item, User user) {
+            Order order = new Order(0, item, user);
+            orders.Add(order);
+            operationsContainer.OrderOperations.AddOrder(order);
 
-        public void doOrder(Item item, User user, int id) {
-            orders.Add(new Order(id, item, user));
         }
         public User FindUser(string email,string password)
         {
-            return users.First(u => u.getLogin() == email && u.getPassword() == password);
+            return users.Last(u => u.getLogin() == email && u.getPassword() == password);
+        }
+        public List<Item> findItems(string text)
+        {
+            string pattern = $@"{text}";
+            return items.Where(i => Regex.IsMatch(i.Name, text, RegexOptions.IgnoreCase)).ToList();
+
         }
         public void newManager(User user)
         {

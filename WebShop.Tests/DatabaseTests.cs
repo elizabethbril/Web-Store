@@ -34,7 +34,14 @@ namespace WebShop.Tests
         [TestMethod]
         public void OperationContainerTest()
         {
-           
+            ShopLogic logic = new ShopLogic();
+            Logic.User user = logic.FindUser("admin", "admin");
+            if (user.GetType() == typeof(Logic.Admin))
+            {
+                Console.WriteLine("u tebya problemi, brat");
+            }
+
+
         }
     }
 }

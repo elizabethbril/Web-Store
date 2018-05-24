@@ -9,6 +9,10 @@ namespace Database
     public class Admin:User
     {
         public Admin() { }
+        public Admin(string login, string password, string shortName, string phoneNumber):base(login,password,shortName,phoneNumber)
+        {
+            
+        }
         public Admin(User user) :
              base(user.Login, user.Password, user.ShortName, user.PhoneNumber)
         {

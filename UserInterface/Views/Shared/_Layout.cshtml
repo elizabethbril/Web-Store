@@ -19,7 +19,19 @@
             }
             else
             {
-        <span>@user.getShortname()</span><a href="/Home/Exit">     Exit</a>
+                if (user is Logic.Manager)
+                {
+        <a href="/Home/Manager">@user.getShortname()</a>
+                }
+                else if (user is Logic.Admin)
+                {
+                    <a href="/Home/Admin">@user.getShortname()</a>
+                }
+                else
+                {
+        <span>@user.getShortname()</span>
+                }
+            <a href="/Home/Exit">     Exit</a>
             }
         </div>
 
@@ -35,8 +47,8 @@
         </tr>
     </table>
     <div class="search-div">
-        <form class="search-form" method="post">
-            <input class="searchfield" type="text" name="name" value="" placeholder="Search" />
+        <form class="search-form" method="post" action="/Home/Search">
+            <input class="searchfield" type="text" name="text" value="" placeholder="Search" />
             <div class="submit">
                 <input class="search-but" type="submit" name="submit" value="" />
             </div>

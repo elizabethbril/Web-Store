@@ -31,7 +31,7 @@ namespace Logic
         public void AddOrder(Order Order)
         {
 
-            _uow.Orders.Create(new Database.Order { Item = Mapper.Map<Item, Database.Item>(Order.item), User = Mapper.Map<User, Database.User>(Order.user) });
+            _uow.Orders.Create(new Database.Order { Item = new Database.Item(Order.item.Description, Order.item.Price, Order.item.Name, Order.item.ImageLink, Order.item.Purchases), User = new Database.User(Order.user.getLogin(), Order.user.getPassword(), Order.user.getShortname(), Order.user.getPhoneNumber()),Submitted=Order.submitted });
        
         }
 

@@ -44,7 +44,7 @@ namespace WebShop.Tests
             User newUser = new User(login1, password1, shortname1, phone1);
 
             Logic.ShopLogic logic = new Logic.ShopLogic();
-            logic.doOrder(item, newUser, 456789);
+            logic.doOrder(item, newUser);
             Order order = new Order(456789, item, newUser);
 
             Assert.AreEqual(order.orderId, logic.orders[0].orderId);

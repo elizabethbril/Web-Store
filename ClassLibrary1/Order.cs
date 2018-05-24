@@ -9,6 +9,7 @@ namespace Logic
     public class Order
     {
         public int orderId;
+        public bool submitted;
         public Item item;
         public User user;
         public Order() { }

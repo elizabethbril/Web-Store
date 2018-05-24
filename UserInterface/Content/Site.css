@@ -145,13 +145,18 @@ div .advantages {
 .filters-submit {
     margin-top: 15%;
 }
-
+img{
+    height:150px;
+    width:150px;
+}
 .product-div {
     display: inline-block;
+    vertical-align:top;
     width: 20%;
     margin-right: 2.25%;
     margin-left: 2.25%;
     margin-bottom: 4%;
+    height:290px;
 }
 
 .price-p {

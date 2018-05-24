@@ -9,6 +9,7 @@ namespace Database
     public class Order
     {
         public int Id { get; set; }
+        public bool Submitted { get; set; }
 
         public Item Item { get; set; }
         public int? ItemId { get; set; } 

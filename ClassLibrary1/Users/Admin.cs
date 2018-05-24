@@ -8,6 +8,7 @@ namespace Logic
 {
     public class Admin:User
     {
+        public Admin() { }
         public Admin(User user) :
              base(user.getLogin(), user.getPassword(), user.getShortname(), user.getPhoneNumber())
         {

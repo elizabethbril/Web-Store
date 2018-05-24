@@ -29,30 +29,34 @@ namespace UserInterface.Controllers
             {
                 case 1:
                     currentItems = shopLogic.items.Where(i => i.GetType() == typeof(Logic.Laptop)).Select(i => i).ToList();
-                    return View(currentItems);
+                    break;
                 case 2:
                     currentItems = shopLogic.items.Where(i => i.GetType() == typeof(Logic.SmartPhone)).Select(i => i).ToList();
-                    return View(currentItems);
+                    break;
                 case 3:
                     currentItems = shopLogic.items.Where(i => i.GetType() == typeof(Logic.Tablet)).Select(i => i).ToList();
-                    return View(currentItems);
+                    break;
                 case 4:
                     currentItems = shopLogic.items.Where(i => i.GetType() == typeof(Logic.PhotoTechique)).Select(i => i).ToList();
-                    return View(currentItems);
+                    break;
                 case 5:
                     currentItems = shopLogic.items.Where(i => i.GetType() == typeof(Logic.Accessories)).Select(i => i).ToList();
-                    return View(currentItems);
+                    break;
                 default:
                     return HttpNotFound();
             }
+            Session["items"] = currentItems;
+            return View(currentItems);
+
 
         }
         [HttpPost]
         public ActionResult Products(int price1, int price2)
         {
-
-            return View(currentItems.Select(i => i).ToList());
+            currentItems = (List<Item>)Session["items"];
+            return View(currentItems.Where(i=>i.Price>=price1&&i.Price<=price2).ToList());
         }
+        
         public ActionResult Login()
         {
             return View();
@@ -63,7 +67,7 @@ namespace UserInterface.Controllers
             User user = shopLogic.FindUser(email, password);
             if (user != null)
             {
-               
+                
                 Session["user"] = user;
                 return View("Index");
             }
@@ -95,6 +99,27 @@ namespace UserInterface.Controllers
         {
             Session["user"] = null;
             return View("Index");
+        }
+        [HttpPost]
+        public ActionResult Search(string text)
+        {
+            List<Item> items = shopLogic.findItems(text);
+            Session["items"] = items;
+            return View("Products", items );
+        }
+        [HttpGet]
+        public ActionResult Buy(int id)
+        {
+            User user = (User)Session["user"];
+            if (user != null)
+            {
+                shopLogic.doOrder(shopLogic.findItem(id), user);
+                return View();
+            }
+            else
+            {
+                return HttpNotFound();
+            }
         }
         
     }

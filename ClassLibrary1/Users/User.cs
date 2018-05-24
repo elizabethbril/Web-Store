@@ -8,12 +8,13 @@ namespace Logic
 {
     public class User
     {
-        protected string login;
-        protected string password;
-        protected string shortName;
-        protected string phoneNumber;
-        protected bool authorized;
+        public string login;
+        public string password;
+        public string shortName;
+        public string phoneNumber;
+        public bool authorized;
 
+        public User() { }
         public User(string login, string password, string shortName, string phoneNumber)
         {
             this.login = login;
