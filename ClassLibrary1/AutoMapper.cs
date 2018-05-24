@@ -25,6 +25,8 @@ namespace Logic
                 cfg.CreateMap<Database.Manager, Manager>();
                 cfg.CreateMap<Database.Admin, Admin>();
                 cfg.CreateMap<Database.Order, Order>();
+                cfg.CreateMap<List<Database.Item>, List<Item>>();
+                cfg.CreateMap<List<Database.User>, List<User>>();
             });
         }
 

@@ -61,7 +61,7 @@ namespace WebShop.Tests
 
             Logic.ShopLogic logic = new Logic.ShopLogic();
             logic.users.Add(newUser);
-            logic.newManager(newUser);
+            logic.newManager(newUser.id);
 
             Assert.AreEqual(newUser.getLogin(), logic.users[0].getLogin());
         }

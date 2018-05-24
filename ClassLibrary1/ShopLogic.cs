@@ -28,9 +28,16 @@ namespace Logic
             items.AddRange(operationsContainer.PhotoTechiqueOperations.GetPhotoTechique());
             items.AddRange(operationsContainer.SmartPhoneOperations.GetSmartPhone());
             items.AddRange(operationsContainer.TabletOperations.GetTablet());
-            users.AddRange(operationsContainer.UserOperations.GetUser());
+            
            users.AddRange(operationsContainer.ManagerOperations.GetManager());
             users.AddRange(operationsContainer.AdminOperations.GetAdmin());
+            foreach(User user in operationsContainer.UserOperations.GetUser())
+            {
+                if (!users.Contains(user))
+                {
+                    users.Add(user);
+                }
+            }
             orders.AddRange(operationsContainer.OrderOperations.GetOrder());
         }
         public void Registration(string login, string password, string shortName, string phone) 
@@ -58,9 +65,13 @@ namespace Logic
             operationsContainer.OrderOperations.AddOrder(order);
 
         }
+        public User FindUserById(int id)
+        {
+            return users.First(u => u.id == id);
+        }
         public User FindUser(string email,string password)
         {
-            return users.Last(u => u.getLogin() == email && u.getPassword() == password);
+            return users.First(u => u.getLogin() == email && u.getPassword() == password);
         }
         public List<Item> findItems(string text)
         {
@@ -68,12 +79,15 @@ namespace Logic
             return items.Where(i => Regex.IsMatch(i.Name, text, RegexOptions.IgnoreCase)).ToList();
 
         }
-        public void newManager(User user)
+        public void newManager(int id)
         {
-            for(int i=0; i<users.Count;i++)
+            operationsContainer.UserOperations.DeleteUser(id);
+            Manager manager = new Manager(FindUserById(id));
+            operationsContainer.ManagerOperations.AddManager(manager);
+            for (int i = 0; i < users.Count; i++)
             {
-                if (users[i].Equals(user))
-                    users[i] = new Manager(user);
+                if (users[i].id == id)
+                    users[i] = manager;
             }
         }
     }

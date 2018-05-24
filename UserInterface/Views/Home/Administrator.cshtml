@@ -1,62 +1,21 @@
-﻿
+﻿@model List<Logic.User>
 @{
     ViewData["Title"] = "Administrator";
 }
 
 <div class="users-div">
+    @foreach (Logic.User user in Model)
+    {
     <div class="user-div">
-        <p class="nickname-p">nestea08</p>
-        <div class="email-div"><span class="email-span">nestea08@yandex.ru</span></div>
-        <div class="email-div"><span class="telephone-span">0964101687</span></div>
-        <button class="makemanager-but" type="submit" name="submit">Make a manager</button>
+        <p class="nickname-p">@user.getShortname()</p>
+        <div class="email-div"><span class="email-span">@user.getLogin()</span></div>
+        <div class="email-div"><span class="telephone-span">@user.getPhoneNumber()</span></div>
+        @if (user.GetType() != typeof(Logic.Manager) && user.GetType() != typeof(Logic.Admin))
+        {
+        <a href="/Home/NewManager/@user.id">Make a manager</a>
+        }
     </div>
-    <div class="user-div">
-        <p class="nickname-p">nestea08</p>
-        <div class="email-div"><span class="email-span">nestea08@yandex.ru</span></div>
-        <div class="email-div"><span class="telephone-span">0964101687</span></div>
-        <button class="makemanager-but" type="submit" name="submit">Make a manager</button>
-    </div>
-    <div class="user-div">
-        <p class="nickname-p">nestea08</p>
-        <div class="email-div"><span class="email-span">nestea08@yandex.ru</span></div>
-        <div class="email-div"><span class="telephone-span">0964101687</span></div>
-        <button class="makemanager-but" type="submit" name="submit">Make a manager</button>
-    </div>
-    <div class="user-div">
-        <p class="nickname-p">nestea08</p>
-        <div class="email-div"><span class="email-span">nestea08@yandex.ru</span></div>
-        <div class="email-div"><span class="telephone-span">0964101687</span></div>
-        <button class="makemanager-but" type="submit" name="submit">Make a manager</button>
-    </div>
-    <div class="user-div">
-        <p class="nickname-p">nestea08</p>
-        <div class="email-div"><span class="email-span">nestea08@yandex.ru</span></div>
-        <div class="email-div"><span class="telephone-span">0964101687</span></div>
-        <button class="makemanager-but" type="submit" name="submit">Make a manager</button>
-    </div>
-    <div class="user-div">
-        <p class="nickname-p">nestea08</p>
-        <div class="email-div"><span class="email-span">nestea08@yandex.ru</span></div>
-        <div class="email-div"><span class="telephone-span">0964101687</span></div>
-        <button class="makemanager-but" type="submit" name="submit">Make a manager</button>
-    </div>
-    <div class="user-div">
-        <p class="nickname-p">nestea08</p>
-        <div class="email-div"><span class="email-span">nestea08@yandex.ru</span></div>
-        <div class="email-div"><span class="telephone-span">0964101687</span></div>
-        <button class="makemanager-but" type="submit" name="submit">Make a manager</button>
-    </div>
-    <div class="user-div">
-        <p class="nickname-p">nestea08</p>
-        <div class="email-div"><span class="email-span">nestea08@yandex.ru</span></div>
-        <div class="email-div"><span class="telephone-span">0964101687</span></div>
-        <button class="makemanager-but" type="submit" name="submit">Make a manager</button>
-    </div>
-    <div class="user-div">
-        <p class="nickname-p">nestea08</p>
-        <div class="email-div"><span class="email-span">nestea08@yandex.ru</span></div>
-        <div class="email-div"><span class="telephone-span">0964101687</span></div>
-        <button class="makemanager-but" type="submit" name="submit">Make a manager</button>
-    </div>
+    }
+   
 </div>
 

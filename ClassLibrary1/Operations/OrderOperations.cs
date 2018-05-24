@@ -19,7 +19,7 @@ namespace Logic
         public List<Order> GetOrder()
         {
 
-            return Mapper.Map<IEnumerable<Database.Order>, List<Order>>(_uow.Orders.Get());
+            return Mapper.Map<IEnumerable<Database.Order>, List<Order>>(_uow.Orders.GetWithInclude(u=>u.User,u=>u.Item));
 
         }
         public Order GetOrderById(int id)
@@ -31,7 +31,7 @@ namespace Logic
         public void AddOrder(Order Order)
         {
 
-            _uow.Orders.Create(new Database.Order { Item = new Database.Item(Order.item.Description, Order.item.Price, Order.item.Name, Order.item.ImageLink, Order.item.Purchases), User = new Database.User(Order.user.getLogin(), Order.user.getPassword(), Order.user.getShortname(), Order.user.getPhoneNumber()),Submitted=Order.submitted });
+            _uow.Orders.Create(new Database.Order { Item = new Database.Item(Order.item.Description, Order.item.Price, Order.item.Name, Order.item.ImageLink, Order.item.Views), User = new Database.User(Order.user.getLogin(), Order.user.getPassword(), Order.user.getShortname(), Order.user.getPhoneNumber()),Submitted=Order.submitted });
        
         }
 

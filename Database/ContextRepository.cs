@@ -44,6 +44,7 @@ namespace Database
         {
             using (ShopContext context = new ShopContext())
             {
+              
                 context.Set<TEntity>().Add(item);
                 context.SaveChanges();
             }
@@ -60,30 +61,37 @@ namespace Database
         {
             using (ShopContext context = new ShopContext())
             {
+                context.Set<TEntity>().Attach(item);
                 context.Set<TEntity>().Remove(item);
                 context.SaveChanges();
             }
         }
         public IEnumerable<TEntity> GetWithInclude(params Expression<Func<TEntity, object>>[] includeProperties)
         {
-            return Include(includeProperties).ToList();
-        }
+            using (ShopContext context = new ShopContext())
+            {
+                var query = Include(context,includeProperties);
+                return query.AsEnumerable().ToList();
+            }
+         }
 
         public IEnumerable<TEntity> GetWithInclude(Func<TEntity, bool> predicate,
             params Expression<Func<TEntity, object>>[] includeProperties)
         {
-            var query = Include(includeProperties);
-            return query.AsEnumerable().Where(predicate).ToList();
-        }
-
-        private IQueryable<TEntity> Include(params Expression<Func<TEntity, object>>[] includeProperties)
-        {
             using (ShopContext context = new ShopContext())
             {
+                var query = Include(context,includeProperties);
+                return query.AsEnumerable().Where(predicate).ToList();
+            }
+        }
+       
+        private IQueryable<TEntity> Include(ShopContext context,params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+           
                 IQueryable<TEntity> query = context.Set<TEntity>().AsNoTracking();
                 return includeProperties
                     .Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
-            }
+            
         }
     }
 }

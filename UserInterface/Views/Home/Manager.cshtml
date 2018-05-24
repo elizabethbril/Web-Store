@@ -1,15 +1,21 @@
-﻿
+﻿@model List<Logic.Order>
 @{
     ViewData["Title"] = "Manager";
 }
 
 <div class="orders">
+    @foreach (Logic.Order order in Model)
+    {
     <div class="order">
-        <p>Order №1</p>
-        <div class="order-username">User: username</div>
-        <div class="order-username">Product: product</div>
-        <button class="order-but" type="submit" name="submit">Confirm</button>
+        <p>@order.orderId</p>
+        <div class="order-username">@order.user.shortName</div>
+        <div class="order-username">@order.item.Name</div>
+        @if (!order.submitted)
+        {
+        <a href="/Home/ConfirmOrder/@order.orderId">Confirm</a>
+        }
     </div>
+    }
     <div class="order">
         <p>Order №1</p>
         <div class="order-username">User: username</div>

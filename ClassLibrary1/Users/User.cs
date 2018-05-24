@@ -8,6 +8,7 @@ namespace Logic
 {
     public class User
     {
+        public int id;
         public string login;
         public string password;
         public string shortName;
@@ -27,6 +28,16 @@ namespace Logic
         public string getPassword() { return password; }
         public string getShortname() { return shortName; }
         public string getPhoneNumber() { return phoneNumber; }
-
+        public override bool Equals(object obj)
+        {
+            if(obj is User user)
+            {
+                if (login == user.login && password == user.password && shortName == user.shortName && phoneNumber == user.phoneNumber)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

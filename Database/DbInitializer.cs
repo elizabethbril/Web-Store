@@ -11,7 +11,7 @@ namespace Database
     {
         protected override void Seed(ShopContext context)
         {
-            Tablet tablet = new Tablet("no descr",6299, "Tablet Lenovo Tab 3 Plus X70L LTE 2/32GB Black", "copy_lenovo_tab3_za0y0036ua_5ab11c32760cb_images_3640238468.jpg",0);
+            
             User user = new User("nestea08@yandex.ru","11111111","nestea08","380964101687");
             Admin admin = new Admin("admin", "admin", "admin", "admin");
             //add some laptops
@@ -33,11 +33,11 @@ namespace Database
             context.Tablets.Add(new Tablet("no descr", 4399, "Tablet Pixus Vision 10.1 3G 3/16GB", "copy_pixus_vision_10_1_3g_5a749c016e4e2_images_2828805919.jpg", 6));
             context.Tablets.Add(new Tablet("no descr", 5389, "Tablet Lenovo Tab 3 X70F 2/16GB Black (ZA0X0197UA)", "copy_lenovo_tab3_za0x0066ua_5aa66c1762d34_images_3510251871.jpg", 1));
             context.Tablets.Add(new Tablet("no descr", 7199, "Tablet Lenovo Tab 3 Plus X70L 3G 16GB Slate Black (ZA0Y0036UA)", "copy_lenovo_tab3_za0x0066ua_58ab07b3567a1_images_1865224058.jpg", 0));
-<<<<<<< HEAD
-           // context.Admins.Add(new Admin("admin", "admin", "admin", "admin"));
+
+      
             
             context.Admins.Add(admin);
-=======
+
 
             //add some phototechniqe
             context.PhotoTechiques.Add(new PhotoTechique("no descr", 74999, "Panasonic Lumix DC-GH5S Body Black (DC-GH5SEE-K)", "canon_powershot_g7_x_mark_ii_images_1797905293.jpg", 1));
@@ -53,7 +53,7 @@ namespace Database
             context.Accessories.Add(new Accessories("no descr", 156, "Kingston HyperX Savage USB 3.1 64GB (HXS3/64GB)", "kingston_hxs3_64gb_images_1826556130.png", 15));
             context.Accessories.Add(new Accessories("no descr", 1598, "GameMouse Logitech G903 Black", "32530415_images_2933174479.jpg", 0));
 
->>>>>>> bb322652f3a1d8a22eeeffb225563359cd443935
+
             context.Users.Add(user);
             context.SaveChanges();
             

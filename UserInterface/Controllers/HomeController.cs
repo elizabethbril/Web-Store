@@ -88,12 +88,17 @@ namespace UserInterface.Controllers
         }
         public ActionResult Administrator()
         {
-            return View();
+            return View(shopLogic.users);
         }
-
+        [HttpGet]
+        public ActionResult NewManager(int id)
+        {
+            shopLogic.newManager(id);
+            return View("Administrator",shopLogic.users);
+        }
         public ActionResult Manager()
         {
-            return View();
+            return View(shopLogic.orders);
         }
         public ActionResult Exit()
         {

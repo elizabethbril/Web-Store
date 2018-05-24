@@ -11,6 +11,7 @@ namespace Logic
         /*public Manager(string login, string password, string shortName, string phoneNumber) :
              base(login, password, shortName, phoneNumber)
         { }*/
+        public Manager() { }
         public Manager(User user) :
              base( user.getLogin(), user.getPassword(), user.getShortname(), user.getPhoneNumber())
         {

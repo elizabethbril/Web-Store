@@ -13,7 +13,7 @@ namespace Logic
         public int Price { get; set; }
         public string Name { get; set; }
         public string ImageLink { get; set; }
-        public int Purchases { get; set; }
+        public int Views { get; set; }
         public Item() { }
         public Item(string description, int price, string name, int Id,string imageLink,int purchases)
         {
@@ -22,7 +22,7 @@ namespace Logic
             Name = name;
             this.Id = Id;
             ImageLink = imageLink;
-            Purchases = purchases;
+            Views = purchases;
         }
 
         public Item(Item item)
@@ -32,7 +32,7 @@ namespace Logic
             Name = item.Name;
             Id = item.getId();
             ImageLink = item.ImageLink;
-            Purchases = item.Purchases;
+            Views = item.Views;
         }
 
         public int getId() { return Id; }
