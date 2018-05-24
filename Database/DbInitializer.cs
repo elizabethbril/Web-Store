@@ -33,9 +33,27 @@ namespace Database
             context.Tablets.Add(new Tablet("no descr", 4399, "Tablet Pixus Vision 10.1 3G 3/16GB", "copy_pixus_vision_10_1_3g_5a749c016e4e2_images_2828805919.jpg", 6));
             context.Tablets.Add(new Tablet("no descr", 5389, "Tablet Lenovo Tab 3 X70F 2/16GB Black (ZA0X0197UA)", "copy_lenovo_tab3_za0x0066ua_5aa66c1762d34_images_3510251871.jpg", 1));
             context.Tablets.Add(new Tablet("no descr", 7199, "Tablet Lenovo Tab 3 Plus X70L 3G 16GB Slate Black (ZA0Y0036UA)", "copy_lenovo_tab3_za0x0066ua_58ab07b3567a1_images_1865224058.jpg", 0));
+<<<<<<< HEAD
            // context.Admins.Add(new Admin("admin", "admin", "admin", "admin"));
             
             context.Admins.Add(admin);
+=======
+
+            //add some phototechniqe
+            context.PhotoTechiques.Add(new PhotoTechique("no descr", 74999, "Panasonic Lumix DC-GH5S Body Black (DC-GH5SEE-K)", "canon_powershot_g7_x_mark_ii_images_1797905293.jpg", 1));
+            context.PhotoTechiques.Add(new PhotoTechique("no descr", 27999, "Sony Alpha 6300 Body Black (ILCE6300B.CEC)", "sony_ilce6300b_cec_images_1538298308.jpg", 8));
+            context.PhotoTechiques.Add(new PhotoTechique("no descr", 18999, "Panasonic Lumix DMC-G7 Kit 14-42mm Black (DMC-G7KEE-K)", "panasonic_lumix_dmc_g7kee_k_images_1319226872.jpg", 0));
+            context.PhotoTechiques.Add(new PhotoTechique("no descr", 30999, "Canon EOS M6 15-45 IS STM Silver (1725C045)", "canon_1724c045_images_3422208311.jpg", 0));
+            context.PhotoTechiques.Add(new PhotoTechique("no descr", 74999, "Olympus OM-D E-M10 Mark II Pancake Zoom 14-42mm Kit Black (V207052BE000)", "olympus_omd_em10ll_pancake_kit_black_images_1382665659.jpg", 1));
+
+            //add some accessories
+            context.Accessories.Add(new Accessories("no descr", 1799, "GamePad Sony Dualshock V2 Bluetooth PS4 Black", "sony_dualshock_4_v2_for_ps_4_black_images_1769139205.jpg", 15));
+            context.Accessories.Add(new Accessories("no descr", 2199, "USB-hub Kingston Nucleum USB 3.1 Type-C (C-HUBC1-SR-EN)", "kingston_c_hubc1_sr_en_images_2949154215.jpg", 9));
+            context.Accessories.Add(new Accessories("no descr", 3199, "Kingston HyperX Cloud II (KHX-HSCP-RD) Red", "kingston_hyperx_cloud_ii_red_images_434614402.jpg", 87));
+            context.Accessories.Add(new Accessories("no descr", 156, "Kingston HyperX Savage USB 3.1 64GB (HXS3/64GB)", "kingston_hxs3_64gb_images_1826556130.png", 15));
+            context.Accessories.Add(new Accessories("no descr", 1598, "GameMouse Logitech G903 Black", "32530415_images_2933174479.jpg", 0));
+
+>>>>>>> bb322652f3a1d8a22eeeffb225563359cd443935
             context.Users.Add(user);
             context.SaveChanges();
             

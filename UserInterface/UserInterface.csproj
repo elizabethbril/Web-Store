@@ -166,10 +166,21 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\acer-aspire-1-a114-31-c5ub-nx-shxeu-008-black-141-150x150.jpg" />
+    <Content Include="images\asus-x541na-x541na-go129-white-15-63-150x150.jpeg" />
+    <Content Include="images\copy_asus_z301mfl_1h020a_5a854ca23c3d8_images_3057835983.jpg" />
+    <Content Include="images\copy_lenovo_tab3_za0x0066ua_58ab07b3567a1_images_1865224058.jpg" />
+    <Content Include="images\copy_lenovo_tab3_za0x0066ua_5aa66c1762d34_images_3510251871.jpg" />
     <Content Include="images\copy_lenovo_tab3_za0y0036ua_5ab11c32760cb_images_3640238468.jpg" />
+    <Content Include="images\copy_pixus_vision_10_1_3g_5a749c016e4e2_images_2828805919.jpg" />
     <Content Include="images\dell-inspiron-3552-i35c45diw-60-black-15-6-150x150.jpg" />
     <Content Include="images\iconmonstr-magnifier-4-32.png" />
+    <Content Include="images\lenovo-ideapad-110-15ibr-80t700d2ra-black-15-63-150x150.jpg" />
+    <Content Include="images\lenovo-ideapad-320-15ikb-80xl02qwra-white-15-6-150x150.jpg" />
+    <Content Include="images\lenovo-vibe-c-a2020-dual-sim-white-pa300041ua1-150x150.jpg" />
+    <Content Include="images\lg-k220-x-power-dual-sim-gold-lgk220ds-acisgd1-150x150.jpg" />
+    <Content Include="images\motorola-xt1650-z-lunar-fine-gold6-150x150.jpg" />
     <Content Include="images\samsung-galaxy-a7-sm-a720f-dual-sim-black-sm-a720fzkdsek4-150x150.jpg" />
+    <Content Include="images\sony-xperia-z-3-ds-d-6633-black-150x150.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -242,7 +253,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3451</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
